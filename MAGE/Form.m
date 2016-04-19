@@ -14,7 +14,7 @@
 #import "FileInZipInfo.h"
 #import "ObservationFetchService.h"
 #import "MageServer.h"
-#import "Server+helper.h"
+#import "Server.h"
 
 @implementation Form
 
