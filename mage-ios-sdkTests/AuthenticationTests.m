@@ -9,16 +9,16 @@
 
 #import "LocalAuthentication.h"
 
-#import "TRVSMonitor.h"
+//#import "TRVSMonitor.h"
 
-#import <OHHTTPStubs/OHHTTPStubs.h>
-#import "OHHTTPStubsResponse+JSON.h"
+//#import <OHHTTPStubs/OHHTTPStubs.h>
+//#import "OHHTTPStubsResponse+JSON.h"
 #import "UserUtility.h"
 
 @interface AuthenticationTests : XCTestCase
 //<Authentication> {
 	@property User *user;
-	@property TRVSMonitor *loginMonitor;
+	//@property TRVSMonitor *loginMonitor;
 	@property id<Authentication> authentication;
 //}
 
@@ -29,7 +29,7 @@
 - (void)setUp {
 	[super setUp];
 	
-	self.loginMonitor = [TRVSMonitor monitor];
+	//self.loginMonitor = [TRVSMonitor monitor];
 	
     self.authentication = [Authentication authenticationModuleForType:[Authentication authenticationTypeFromString:@"LOCAL"]];
 	//authentication.delegate = self;
@@ -81,10 +81,10 @@
 - (void) authenticationWasSuccessful:(User *)token {
 	self.user = token;
 	
-	[self.loginMonitor signal];
+//	[self.loginMonitor signal];
 }
 - (void) authenticationHadFailure {
-	[self.loginMonitor signal];
+//	[self.loginMonitor signal];
 	
 }
 

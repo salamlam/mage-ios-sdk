@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050D0226EA9AB3181B05583A /* libPods-mage-ios-sdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 232067EF44F58B825ECFA405 /* libPods-mage-ios-sdkTests.a */; };
 		2F01652D199D1C6D00C4862B /* LocationFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01652C199D1C6D00C4862B /* LocationFetchService.m */; };
 		2F01653319A2A88D00C4862B /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01653219A2A88D00C4862B /* LocationService.m */; };
 		2F01653A19A4F11E00C4862B /* NSDate+Iso8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01653919A4F11E00C4862B /* NSDate+Iso8601.m */; };
@@ -36,7 +37,9 @@
 		4CAF959218C62E0100A41CB8 /* AuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF959118C62E0100A41CB8 /* AuthenticationTests.m */; };
 		4CAF95A018C62F7C00A41CB8 /* LocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */; };
 		4CAF95A318C6616300A41CB8 /* Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF95A218C6616300A41CB8 /* Authentication.m */; };
+		753E314F1CDB82DF00AC6F36 /* GPSLocation+helperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 753E314E1CDB82DF00AC6F36 /* GPSLocation+helperTests.m */; };
 		7595154F1CCAA71400F0F758 /* NSDate+Iso8601Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */; };
+		D4A925B09AA700D74C1C8DD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAF55257D70555B9C834818 /* libPods.a */; };
 		F70E6EF619785985002D66F6 /* Attachment+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F70E6EF519785985002D66F6 /* Attachment+helper.m */; };
 		F739EFF11AB0C813003A6E4B /* Team+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F739EFF01AB0C813003A6E4B /* Team+helper.m */; };
 		F75DD31A1A9F9F230007FA3F /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = F75DD3191A9F9F230007FA3F /* NSString+Contains.m */; };
@@ -85,6 +88,7 @@
 /* Begin PBXFileReference section */
 		0B43815519D5CF6AF74F5F61 /* Pods-mage-ios-sdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mage-ios-sdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FFAEE42C21F68388710D523 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		232067EF44F58B825ECFA405 /* libPods-mage-ios-sdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mage-ios-sdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F01652B199D1C6D00C4862B /* LocationFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationFetchService.h; path = MAGE/LocationFetchService.h; sourceTree = SOURCE_ROOT; };
 		2F01652C199D1C6D00C4862B /* LocationFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationFetchService.m; path = MAGE/LocationFetchService.m; sourceTree = SOURCE_ROOT; };
 		2F01653119A2A88D00C4862B /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationService.h; path = MAGE/LocationService.h; sourceTree = SOURCE_ROOT; };
@@ -141,8 +145,10 @@
 		4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalAuthentication.m; path = MAGE/LocalAuthentication.m; sourceTree = SOURCE_ROOT; };
 		4CAF95A118C62FA000A41CB8 /* Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Authentication.h; path = MAGE/Authentication.h; sourceTree = SOURCE_ROOT; };
 		4CAF95A218C6616300A41CB8 /* Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Authentication.m; path = MAGE/Authentication.m; sourceTree = SOURCE_ROOT; };
+		753E314E1CDB82DF00AC6F36 /* GPSLocation+helperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GPSLocation+helperTests.m"; sourceTree = "<group>"; };
 		7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Iso8601Tests.m"; sourceTree = "<group>"; };
 		CF92406987D799C2D14562A9 /* Pods-mage-ios-sdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mage-ios-sdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests.release.xcconfig"; sourceTree = "<group>"; };
+		ECAF55257D70555B9C834818 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70E6EF419785985002D66F6 /* Attachment+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Attachment+helper.h"; path = "MAGE/Attachment+helper.h"; sourceTree = SOURCE_ROOT; };
 		F70E6EF519785985002D66F6 /* Attachment+helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Attachment+helper.m"; path = "MAGE/Attachment+helper.m"; sourceTree = SOURCE_ROOT; };
 		F739EFEF1AB0C813003A6E4B /* Team+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Team+helper.h"; path = "MAGE/Team+helper.h"; sourceTree = SOURCE_ROOT; };
@@ -198,6 +204,7 @@
 			files = (
 				F7B25E24191AB5A900589E5B /* CoreLocation.framework in Frameworks */,
 				4CAF957618C62E0100A41CB8 /* Foundation.framework in Frameworks */,
+				D4A925B09AA700D74C1C8DD6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +214,7 @@
 			files = (
 				4CAF958518C62E0100A41CB8 /* Foundation.framework in Frameworks */,
 				4CAF958A18C62E0100A41CB8 /* libmage-ios-sdk.a in Frameworks */,
+				050D0226EA9AB3181B05583A /* libPods-mage-ios-sdkTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +320,8 @@
 			children = (
 				F7B25E23191AB5A900589E5B /* CoreLocation.framework */,
 				4CAF957518C62E0100A41CB8 /* Foundation.framework */,
+				ECAF55257D70555B9C834818 /* libPods.a */,
+				232067EF44F58B825ECFA405 /* libPods-mage-ios-sdkTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -356,6 +366,7 @@
 				4CAF959118C62E0100A41CB8 /* AuthenticationTests.m */,
 				7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */,
 				F768E9C7191D095B003287E3 /* ObservationTests.m */,
+				753E314E1CDB82DF00AC6F36 /* GPSLocation+helperTests.m */,
 				4CAF958C18C62E0100A41CB8 /* Supporting Files */,
 			);
 			name = Tests;
@@ -673,6 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F768E9C8191D095B003287E3 /* ObservationTests.m in Sources */,
+				753E314F1CDB82DF00AC6F36 /* GPSLocation+helperTests.m in Sources */,
 				4CAF959218C62E0100A41CB8 /* AuthenticationTests.m in Sources */,
 				7595154F1CCAA71400F0F758 /* NSDate+Iso8601Tests.m in Sources */,
 			);
