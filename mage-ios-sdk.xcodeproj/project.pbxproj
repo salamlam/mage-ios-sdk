@@ -38,6 +38,7 @@
 		4CAF95A018C62F7C00A41CB8 /* LocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */; };
 		4CAF95A318C6616300A41CB8 /* Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF95A218C6616300A41CB8 /* Authentication.m */; };
 		753E314F1CDB82DF00AC6F36 /* GPSLocation+helperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 753E314E1CDB82DF00AC6F36 /* GPSLocation+helperTests.m */; };
+		7564B5AC1CE144CB0094834D /* mage-ios-sdk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7B275521AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld */; };
 		7595154F1CCAA71400F0F758 /* NSDate+Iso8601Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */; };
 		D4A925B09AA700D74C1C8DD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAF55257D70555B9C834818 /* libPods.a */; };
 		F70E6EF619785985002D66F6 /* Attachment+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F70E6EF519785985002D66F6 /* Attachment+helper.m */; };
@@ -683,6 +684,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7564B5AC1CE144CB0094834D /* mage-ios-sdk.xcdatamodeld in Sources */,
 				F768E9C8191D095B003287E3 /* ObservationTests.m in Sources */,
 				753E314F1CDB82DF00AC6F36 /* GPSLocation+helperTests.m in Sources */,
 				4CAF959218C62E0100A41CB8 /* AuthenticationTests.m in Sources */,

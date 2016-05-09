@@ -19,8 +19,9 @@
 - (void)setUp {
     [super setUp];
 
+    [MagicalRecord setDefaultModelFromClass:[self class]];
     [MagicalRecord setupCoreDataStackWithInMemoryStore];
- 
+    
     //NSManagedObjectContext *defaultContext
     self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
     
@@ -49,7 +50,7 @@
 - (void)tearDown {
     
     self.managedObjectContext = nil;
-
+    [MagicalRecord cleanUp];
     
     [super tearDown];
 }
