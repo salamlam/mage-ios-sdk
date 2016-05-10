@@ -4,11 +4,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GPSLocation+helper.h"
+#import "GPSLocation.h"
 #import "OCMockito.h"
 
 
-#import "Team+helper.h"
+#import "Team.h"
 
 @interface GPSLocation_helperTests : XCTestCase
 @property (nonatomic,retain) NSManagedObjectContext *managedObjectContext;
