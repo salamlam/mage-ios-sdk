@@ -47,8 +47,9 @@
 		4CAF95A018C62F7C00A41CB8 /* LocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */; };
 		4CAF95A318C6616300A41CB8 /* Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF95A218C6616300A41CB8 /* Authentication.m */; };
 		724F71852E287B0838580BC2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC19655BD6F90E0AE5522AC /* libPods.a */; };
-		753E314F1CDB82DF00AC6F36 /* GPSLocation+helperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 753E314E1CDB82DF00AC6F36 /* GPSLocation+helperTests.m */; };
+		753E314F1CDB82DF00AC6F36 /* GPSLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 753E314E1CDB82DF00AC6F36 /* GPSLocationTests.m */; };
 		7564B5AC1CE144CB0094834D /* mage-ios-sdk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7B275521AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld */; };
+		7564B5AE1CE3717E0094834D /* TeamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7564B5AD1CE3717E0094834D /* TeamTests.m */; };
 		7595154F1CCAA71400F0F758 /* NSDate+Iso8601Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */; };
 		D4A925B09AA700D74C1C8DD6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		F75DD31A1A9F9F230007FA3F /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = F75DD3191A9F9F230007FA3F /* NSString+Contains.m */; };
@@ -169,7 +170,8 @@
 		4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalAuthentication.m; path = MAGE/LocalAuthentication.m; sourceTree = SOURCE_ROOT; };
 		4CAF95A118C62FA000A41CB8 /* Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Authentication.h; path = MAGE/Authentication.h; sourceTree = SOURCE_ROOT; };
 		4CAF95A218C6616300A41CB8 /* Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Authentication.m; path = MAGE/Authentication.m; sourceTree = SOURCE_ROOT; };
-		753E314E1CDB82DF00AC6F36 /* GPSLocation+helperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GPSLocation+helperTests.m"; sourceTree = "<group>"; };
+		753E314E1CDB82DF00AC6F36 /* GPSLocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSLocationTests.m; sourceTree = "<group>"; };
+		7564B5AD1CE3717E0094834D /* TeamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTests.m; sourceTree = "<group>"; };
 		7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Iso8601Tests.m"; sourceTree = "<group>"; };
 		CF92406987D799C2D14562A9 /* Pods-mage-ios-sdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mage-ios-sdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests.release.xcconfig"; sourceTree = "<group>"; };
 		DEC19655BD6F90E0AE5522AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,11 +378,12 @@
 		4CAF958B18C62E0100A41CB8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4CAF958C18C62E0100A41CB8 /* Supporting Files */,
 				4CAF959118C62E0100A41CB8 /* AuthenticationTests.m */,
 				7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */,
 				F768E9C7191D095B003287E3 /* ObservationTests.m */,
-				753E314E1CDB82DF00AC6F36 /* GPSLocation+helperTests.m */,
-				4CAF958C18C62E0100A41CB8 /* Supporting Files */,
+				753E314E1CDB82DF00AC6F36 /* GPSLocationTests.m */,
+				7564B5AD1CE3717E0094834D /* TeamTests.m */,
 			);
 			name = Tests;
 			path = "mage-ios-sdkTests";
@@ -699,8 +702,9 @@
 			files = (
 				7564B5AC1CE144CB0094834D /* mage-ios-sdk.xcdatamodeld in Sources */,
 				F768E9C8191D095B003287E3 /* ObservationTests.m in Sources */,
-				753E314F1CDB82DF00AC6F36 /* GPSLocation+helperTests.m in Sources */,
+				753E314F1CDB82DF00AC6F36 /* GPSLocationTests.m in Sources */,
 				4CAF959218C62E0100A41CB8 /* AuthenticationTests.m in Sources */,
+				7564B5AE1CE3717E0094834D /* TeamTests.m in Sources */,
 				7595154F1CCAA71400F0F758 /* NSDate+Iso8601Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,6 +842,7 @@
 				);
 				INFOPLIST_FILE = "mage-ios-sdkTests/mage-ios-sdkTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "mil.nga.giat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -857,6 +862,7 @@
 				GCC_PREFIX_HEADER = "MAGE/mage-ios-sdk-Prefix.pch";
 				INFOPLIST_FILE = "mage-ios-sdkTests/mage-ios-sdkTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "mil.nga.giat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
