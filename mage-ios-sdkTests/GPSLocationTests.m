@@ -92,7 +92,7 @@
 }
 
 - (void)testFetchLastXGpsLocations{
-    //Arrange - Multiple test locations: Need to sleep between location creation to have different timestamps
+    //Arrange - Multiple test locations
     NSDate *dateOne = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:05];
     NSDate *dateTwo = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:10];
     NSDate *dateThree = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:15];
