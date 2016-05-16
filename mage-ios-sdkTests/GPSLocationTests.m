@@ -13,6 +13,27 @@
 @property (nonatomic,retain) NSManagedObjectContext *managedObjectContext;
 @end
 
+@interface NSDate (Tests)
+
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day minute:(NSInteger)minute second:(NSInteger)second;
+
+@end
+
+@implementation NSDate (Tests)
+
++ (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day minute:(NSInteger)minute second:(NSInteger)second {
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setYear:year];
+    [components setMonth:month];
+    [components setDay:day];
+    [components setMinute:minute];
+    [components setSecond:second];
+    return [calendar dateFromComponents:components];
+}
+
+@end
+
 @implementation GPSLocationTests
 
 - (void)setUp {
@@ -72,11 +93,28 @@
 
 - (void)testFetchLastXGpsLocations{
     //Arrange - Multiple test locations: Need to sleep between location creation to have different timestamps
-    CLLocation *testLocationOne = [[CLLocation alloc] initWithLatitude:-1.0 longitude:1.0];
-    [NSThread sleepForTimeInterval:0.01f];
-    CLLocation *testLocationTwo = [[CLLocation alloc] initWithLatitude:1.0 longitude:-1.0];
-    [NSThread sleepForTimeInterval:0.01f];
-    CLLocation *testLocationThree = [[CLLocation alloc] initWithLatitude:0.0 longitude:0.0];
+    NSDate *dateOne = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:05];
+    NSDate *dateTwo = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:10];
+    NSDate *dateThree = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:15];
+    CLLocation *testLocationOne = [[CLLocation alloc]
+                                   initWithCoordinate:CLLocationCoordinate2DMake(-1.0, 1.0)
+                                   altitude:0
+                                   horizontalAccuracy:0
+                                   verticalAccuracy:0
+                                   timestamp:dateOne];
+    CLLocation *testLocationTwo = [[CLLocation alloc]
+                                   initWithCoordinate:CLLocationCoordinate2DMake(1.0, -1.0)
+                                   altitude:0
+                                   horizontalAccuracy:0
+                                   verticalAccuracy:0
+                                   timestamp:dateTwo];
+    CLLocation *testLocationThree = [[CLLocation alloc]
+                                   initWithCoordinate:CLLocationCoordinate2DMake(0.0, 0.0)
+                                   altitude:0
+                                   horizontalAccuracy:0
+                                   verticalAccuracy:0
+                                   timestamp:dateThree];
+    
     [GPSLocation gpsLocationForLocation:testLocationOne inManagedObjectContext:self.managedObjectContext];
     [GPSLocation gpsLocationForLocation:testLocationTwo inManagedObjectContext:self.managedObjectContext];
     [GPSLocation gpsLocationForLocation:testLocationThree inManagedObjectContext:self.managedObjectContext];
