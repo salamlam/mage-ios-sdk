@@ -6,11 +6,18 @@
 #import <XCTest/XCTest.h>
 #import "GPSLocation.h"
 #import "GeoPoint.h"
+#import "Server.h"
 #import "OCMockito.h"
+#import "OHHTTPStubs.h"
+#import <OHHTTPStubs/OHHTTPStubsResponse+JSON.h>
+#import <OHHTTPStubs/OHPathHelpers.h>
+#import "HttpManager.h"
 
 
 @interface GPSLocationTests : XCTestCase
 @property (nonatomic,retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic,retain) NSString *mageServerBaseUrl;
+@property (nonatomic, retain) NSString *serverCurrentEventId;
 @end
 
 @interface NSDate (Tests)
@@ -38,15 +45,30 @@
 
 - (void)setUp {
     [super setUp];
-
+    
+    //Setup in-memory MagicalRecord ManagedObjectContext
     [MagicalRecord setDefaultModelFromClass:[self class]];
     [MagicalRecord setupCoreDataStackWithInMemoryStore];
     self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
+    
+    //Setup Server currentEventId
+    self.serverCurrentEventId = @"currentEventId";
+    NSNumber *currentEventId = [[NSNumber alloc] initWithInt:1];
+    [Server setCurrentEventId: currentEventId];
+    
+    //Setup MageServer baseURL
+    self.mageServerBaseUrl = @"http://myGpsTest.com";
+    NSString * const kBaseServerUrlKey = @"baseServerUrl";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSURL *url = [NSURL URLWithString: self.mageServerBaseUrl];
+    [defaults setObject:[url absoluteString] forKey:kBaseServerUrlKey];
+
 }
 
 - (void)tearDown {
     self.managedObjectContext = nil;
     [MagicalRecord cleanUp];
+    [OHHTTPStubs removeAllStubs];
     
     [super tearDown];
 }
@@ -144,18 +166,64 @@
 }
 
 - (void)testOperationToPushGpsLocations {
-    CLLocation *testLocationOne = [[CLLocation alloc] initWithLatitude:-1.0 longitude:1.0];
-    CLLocation *testLocationTwo = [[CLLocation alloc] initWithLatitude:1.0 longitude:-1.0];
-    NSArray *testGpsLocations = [NSArray arrayWithObjects:testLocationOne, testLocationTwo, nil];
+    //Arrange
+    NSDate *dateOne = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:05];
+    NSDate *dateTwo = [NSDate dateWithYear:2016 month:5 day:16 minute:05 second:10];
+    CLLocation *testLocationOne = [[CLLocation alloc]
+                                   initWithCoordinate:CLLocationCoordinate2DMake(-1.0, 1.0)
+                                   altitude:0
+                                   horizontalAccuracy:0
+                                   verticalAccuracy:0
+                                   timestamp:dateOne];
+    CLLocation *testLocationTwo = [[CLLocation alloc]
+                                   initWithCoordinate:CLLocationCoordinate2DMake(1.0, -1.0)
+                                   altitude:0
+                                   horizontalAccuracy:0
+                                   verticalAccuracy:0
+                                   timestamp:dateTwo];
+   
+    GPSLocation *testGpsLocationOne = [GPSLocation gpsLocationForLocation:testLocationOne inManagedObjectContext:self.managedObjectContext];
+    GPSLocation *testGpsLocationTwo = [GPSLocation gpsLocationForLocation:testLocationTwo inManagedObjectContext:self.managedObjectContext];
+    NSArray *testGpsLocations = [NSArray arrayWithObjects:testGpsLocationOne, testGpsLocationTwo, nil];
+    NSError *error = nil;
+    [self.managedObjectContext save:&error];
     
     
-    //TODO: Error: Trying to push locations to server (null)/api/events/(null)/locations
+    static const NSTimeInterval kResponseTimeTolerence = 10.0;
+    static const NSTimeInterval kRequestTime = 0.05;
+    static const NSTimeInterval kResponseTime = 0.1;
     
-//    [GPSLocation operationToPushGPSLocations:testGpsLocations success:^{
-//        NSLog(@"Success to push GPS locations to the server");
-//    } failure:^(NSError *failure){
-//        XCTFail(@"Failure to push GPS locations to the server in \"%s\" : %@, %@", __PRETTY_FUNCTION__, failure, [failure userInfo]);
-//    }];
+    NSData* expectedResponse = [NSStringFromSelector(_cmd) dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *testUrl = @"http://myGpsTest.com/api/events/1/locations";
+    
+    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+        //This gets called twice for some reason
+        NSLog(@"stubRequest");
+        return [request.URL.absoluteString isEqualToString: testUrl];
+    } withStubResponse:^OHHTTPStubsResponse*(NSURLRequest *request) {
+        NSLog(@"stubResponse");
+        //return [OHHTTPStubsResponse responseWithFileAtPath:OHPathForFile(@"wsresponse.json",self.class) statusCode:200 headers:@{@"Content-Type":@"application/json"}];
+        NSDictionary* obj = @{ @"key1": @"value1", @"key2": @[@"value2A", @"value2B"] };
+        return [OHHTTPStubsResponse responseWithJSONObject:obj statusCode:200 headers:nil];
+    }];
+    
+    XCTestExpectation* expectation = [self expectationWithDescription:@"OperationToPushGpsLocations request finished"];
+    __block __strong id response = nil;
+    
+    //Act
+    NSOperation *locationPushOperation = [GPSLocation operationToPushGPSLocations:testGpsLocations success:^{
+        NSLog(@"Success to push GPS locations to the server");
+        response = expectedResponse;
+        [expectation fulfill];
+    } failure:^(NSError *failure){
+        XCTFail(@"Failure to push GPS locations to the server in \"%s\" : %@, %@", __PRETTY_FUNCTION__, failure, [failure userInfo]);
+        [expectation fulfill];
+    }];
+    [[HttpManager singleton].manager.operationQueue addOperation:locationPushOperation];
+
+    //Assert
+    [self waitForExpectationsWithTimeout:kRequestTime + kResponseTime + kResponseTimeTolerence handler:nil];
+    XCTAssertEqualObjects(response, expectedResponse, @"Unexpected data received");
 }
 
 

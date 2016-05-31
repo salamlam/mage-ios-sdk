@@ -13,6 +13,6 @@ target :"mage-ios-sdkTests" do
     pod 'Specta', '~> 1.0'        #
     pod 'Expecta',     '~> 1.0'   # expecta matchers
     pod 'OCMockito',   '~> 1.0'   # OCMock
-    #pod 'OHHTTPStubs', "~> 3.1.0"
+    pod 'OHHTTPStubs', '~> 5.0'
     #pod 'TRVSMonitor', "~> 0.0.3"
 end
