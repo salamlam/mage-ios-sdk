@@ -212,13 +212,14 @@
     
     //Act
     NSOperation *locationPushOperation = [GPSLocation operationToPushGPSLocations:testGpsLocations success:^{
-        NSLog(@"Success to push GPS locations to the server");
+        NSLog(@"Success pushing GPS locations to the server");
         response = expectedResponse;
         [expectation fulfill];
     } failure:^(NSError *failure){
         XCTFail(@"Failure to push GPS locations to the server in \"%s\" : %@, %@", __PRETTY_FUNCTION__, failure, [failure userInfo]);
         [expectation fulfill];
     }];
+    
     [[HttpManager singleton].manager.operationQueue addOperation:locationPushOperation];
 
     //Assert
