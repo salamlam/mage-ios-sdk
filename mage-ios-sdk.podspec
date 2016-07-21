@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "mage-ios-sdk"
-  s.version          = "1.0.1"
+  s.version          = "1.1.0"
   s.summary          = "iOS SDK for MAGE"
   s.description      = <<-DESC
                        iOS SDK for MAGE, assist with:
@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
                        * MAGE location services
                        DESC
   s.homepage         = "https://www.nga.mil"
-  s.license          = 'DOD'
-  s.author           = { "NGA" => "newmanw@bit-sys.com" }
+  s.license          = 'Apace 2.0'
+  s.author           = { "NGA" => "winewman@caci.com" }
   s.source           = { :git => "https://github.com/ngageoint/mage-ios-sdk.git", :tag => s.version.to_s }
 
   s.platform         = :ios, '8.0'
@@ -30,5 +30,5 @@ Pod::Spec.new do |s|
   s.dependency 'AFNetworking', '~> 2.3.1'
   s.dependency 'DateTools', '~> 1.3.0'
   s.dependency 'MagicalRecord', '~> 2.3.2'
-  s.dependency 'objective-zip', '~> 0.8.3'
+  s.dependency 'objective-zip', '~> 1.0.2'
 end

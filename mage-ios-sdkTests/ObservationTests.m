@@ -80,21 +80,21 @@
 - (void)testObservationIdFromJson {
     //Arrange
     
-    
-    NSDictionary *jsonObject = @{@"type": @"Feature",
-                                 @"geometry":@[
-                                         @{@"type":@"Point"},
-                                         @{@"coordinate":@[
-                                                   @{@"type":@"Point"},
-                                                   @{@"coordinate":@"-1.0"}
-                                                   ]}
-                                         ],
-                                 @"properties":@"stuff"};
-    
-    
-    NSLog(@" JSON = %@",jsonObject);
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:nil];
-    NSLog(@" JSON DATA \n  %@",[NSString stringWithCString:[jsonData bytes] encoding:NSUTF8StringEncoding]);
+//    
+//    NSDictionary *jsonObject = @{@"type": @"Feature",
+//                                 @"geometry":@[
+//                                         @{@"type":@"Point"},
+//                                         @{@"coordinate":@[
+//                                                   @{@"type":@"Point"},
+//                                                   @{@"coordinate":@"-1.0"}
+//                                                   ]}
+//                                         ],
+//                                 @"properties":@"stuff"};
+//    
+//    
+//    NSLog(@" JSON = %@",jsonObject);
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:nil];
+//    NSLog(@" JSON DATA \n  %@",[NSString stringWithCString:[jsonData bytes] encoding:NSUTF8StringEncoding]);
 
     
     

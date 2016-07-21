@@ -31,7 +31,7 @@
         [self setDirty:[NSNumber numberWithBool:NO]];
     }
     [self setLocalPath: [json objectForKey:@"localPath"]];
-    
+
     NSString *dateString = [json objectForKey:@"lastModified"];
     if (dateString != nil) {
         NSDate *date = [NSDate dateFromIso8601String:dateString];
@@ -40,6 +40,15 @@
         [self setLastModified:[NSDate date]];
     }
     return self;
+}
+
+- (NSURL *) sourceURLWithSize:(NSInteger) size {
+    if (self.localPath) {
+        return [NSURL fileURLWithPath:self.localPath];
+    } else {
+        NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+        return [NSURL URLWithString:[NSString stringWithFormat:@"%@?access_token=%@&size=%ld", self.url, [defaults valueForKeyPath:@"loginParameters.token"], (long) size]];
+    }
 }
 
 - (NSURL *) sourceURL {
