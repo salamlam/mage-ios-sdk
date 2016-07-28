@@ -3,13 +3,12 @@
 //  mage-ios-sdk
 //
 
-#import <XCTest/XCTest.h>
+#import "TestBase.h"
 #import "Team.h"
 #import "User.h"
 
 
-@interface TeamTests : XCTestCase
-@property (nonatomic,retain) NSManagedObjectContext *managedObjectContext;
+@interface TeamTests : TestBase
 
 @end
 
@@ -17,16 +16,9 @@
 
 - (void)setUp {
     [super setUp];
-    
-    [MagicalRecord setDefaultModelFromClass:[self class]];
-    [MagicalRecord setupCoreDataStackWithInMemoryStore];
-    self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
 }
 
 - (void)tearDown {
-    self.managedObjectContext = nil;
-    [MagicalRecord cleanUp];
-    
     [super tearDown];
 }
 

@@ -4,8 +4,10 @@
 //
 //
 
-#import <XCTest/XCTest.h>
+#import "TestBase.h"
 #import "Observation.h"
+#import "MageEnums.h"
+#import "Attachment.h"
 #import "GeoPoint.h"
 #import "Server.h"
 #import "OHHTTPStubs.h"
@@ -14,10 +16,15 @@
 #import "HttpManager.h"
 
 
-@interface ObservationTests : XCTestCase
-@property (nonatomic,retain) NSManagedObjectContext *managedObjectContext;
+@interface ObservationTests : TestBase
 @property (nonatomic,retain) NSString *mageServerBaseUrl;
 @property (nonatomic, retain) NSString *serverCurrentEventId;
+@property (nonatomic, retain) NSDictionary *json;
+@end
+
+@interface Observation (Tests)
++ (NSString *) observationIdFromJson:(NSDictionary *) json;
++ (State) observationStateFromJson:(NSDictionary *) json;
 @end
 
 @implementation NSData (Tests)
@@ -39,26 +46,30 @@
 
 - (void)setUp {
     [super setUp];
-    //Setup in-memory MagicalRecord ManagedObjectContext
-    [MagicalRecord setDefaultModelFromClass:[self class]];
-    [MagicalRecord setupCoreDataStackWithInMemoryStore];
-    self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
-    
+  
     //Setup Server currentEventId
     self.serverCurrentEventId = @"currentEventId";
     NSNumber *currentEventId = [[NSNumber alloc] initWithInt:1];
     [Server setCurrentEventId: currentEventId];
-    
+
     //Setup MageServer baseURL
     self.mageServerBaseUrl = @"http://myObservationTest.com";
     NSString * const kBaseServerUrlKey = @"baseServerUrl";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSURL *url = [NSURL URLWithString: self.mageServerBaseUrl];
-    [defaults setObject:[url absoluteString] forKey:kBaseServerUrlKey];}
+    [defaults setObject:[url absoluteString] forKey:kBaseServerUrlKey];
+
+    //Setup Json Test Data
+    NSString *file = @"ObservationTests.geojson";
+    NSString *jsonPath  = [[[NSBundle bundleForClass:[ObservationTests class]] resourcePath] stringByAppendingPathComponent:file];
+    NSData *jsonObject = [[NSFileManager defaultManager] contentsAtPath:jsonPath];
+    NSError *error = nil;
+    self.json = [NSJSONSerialization JSONObjectWithData:jsonObject options:0 error:&error];
+    
+}
 
 - (void)tearDown {
-    self.managedObjectContext = nil;
-    [MagicalRecord cleanUp];
+
     [OHHTTPStubs removeAllStubs];
     
     [super tearDown];
@@ -79,151 +90,118 @@
 
 - (void)testObservationIdFromJson {
     //Arrange
-    
-//    
-//    NSDictionary *jsonObject = @{@"type": @"Feature",
-//                                 @"geometry":@[
-//                                         @{@"type":@"Point"},
-//                                         @{@"coordinate":@[
-//                                                   @{@"type":@"Point"},
-//                                                   @{@"coordinate":@"-1.0"}
-//                                                   ]}
-//                                         ],
-//                                 @"properties":@"stuff"};
-//    
-//    
-//    NSLog(@" JSON = %@",jsonObject);
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:nil];
-//    NSLog(@" JSON DATA \n  %@",[NSString stringWithCString:[jsonData bytes] encoding:NSUTF8StringEncoding]);
-
-    
-    
-//    {
-//        "type": "Feature",
-//        "geometry": {
-//            "type": "Point",
-//            "coordinates": [
-//                            -1.0,
-//                            1.0
-//                            ]
-//        },
-//        "properties": {
-//            "accuracy": 0,
-//            "field7": "None",
-//            "field8": "",
-//            "provider": "manual",
-//            "timestamp": "2016-05-26T16:08:25.183Z",
-//            "type": "At Venue"
-//        },
-//        "teamIds": [
-//                    "b0589"
-//                    ],
-//        "userId": "67b1b",
-//        "deviceId": "547e3ea",
-//        "lastModified": "2016-07-05T13:11:42.678Z",
-//        "__v": 0,
-//        "attachments": [],
-//        "id": "7e3e814",
-//        "eventId": 1,
-//        "url": "https://myObservationTest.com/api/events/1/observations/7e3e814",
-//        "state": {
-//            "name": "archive",
-//            "userId": "5751be",
-//            "id": "9496c6",
-//            "url": "https://myObservationTest.com/api/events/1/observations/7e3e814/states/9496c6"
-//        }
-//    }
-    
-    
-    
-    
+    NSString *idValue = @"id";
+    NSString *expectedResult = [self.json objectForKey:idValue];
     
     //Act
+    NSString *idResult = [Observation observationIdFromJson:self.json];
+
     //Assert
+    XCTAssertEqual(idResult, expectedResult, @"Id should be unchanged when retrieved.");
 }
 
 - (void)testObservationStateFromJson {
     //Arrange
+    NSString *stateValue = @"state";
+    NSString *nameValue = @"name";
+    NSDictionary *states = [self.json objectForKey:stateValue];
+    NSString *stateResult = [states objectForKey:nameValue];
+    State expectedResult = [stateResult StateEnumFromString];
+    
     //Act
+    State stateActualResult = [Observation observationStateFromJson:self.json];
+    
     //Assert
-    XCTFail("Not Implemented");
+    XCTAssertEqual(stateActualResult, expectedResult, @"State should be unchanged when retrieved.");
 }
 
 - (void)testTransientAttachments {
     //Arrange
+    NSMutableArray *expectedEmptyResult = [NSMutableArray array];
+    NSMutableArray *expectedSingleResult = [NSMutableArray array];
+    Observation *observationEmpty = [Observation alloc];
+//    Observation *observationSingle = [[Observation alloc] init];
+//    Attachment *single = [Attachment attachmentForJson:self.json inContext:self.managedObjectContext];
+//    [observationSingle addTransientAttachment:single];
+    
     //Act
+    NSMutableArray *actualEmptyResult = [observationEmpty transientAttachments];
+   // NSMutableArray *actualSingleResult = [observationSingle transientAttachments];
+    
     //Assert
-    XCTFail("Not Implemented");
+    XCTAssertEqual(actualEmptyResult.count, expectedEmptyResult.count, @"Transient Attachement should be empty when initialized.");
+  //  XCTAssertEqual(actualSingleResult.count, expectedSingleResult.count, @"Transient Attachement should contain a single object.");
+    
 }
-
-- (void)testFieldNameToField {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testCreateJsonToSubmit {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testAddTransientAttachment {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testPopulateObjectFromJson {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testGeneratePropertiesFromRaw {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testLocation {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testSectionName {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testOperationToPushObservation {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testOperationToPullObservationsWithSuccess {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
-- (void)testFetchLastObservationDate {
-    //Arrange
-    //Act
-    //Assert
-    XCTFail("Not Implemented");
-}
-
+//
+//- (void)testFieldNameToField {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testCreateJsonToSubmit {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testAddTransientAttachment {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testPopulateObjectFromJson {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testGeneratePropertiesFromRaw {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testLocation {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testSectionName {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testOperationToPushObservation {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testOperationToPullObservationsWithSuccess {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
+//- (void)testFetchLastObservationDate {
+//    //Arrange
+//    //Act
+//    //Assert
+//    XCTFail("Not Implemented");
+//}
+//
 @end

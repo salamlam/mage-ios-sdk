@@ -1,0 +1,35 @@
+{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+                        -1.0,
+                        1.0
+                        ]
+    },
+    "properties": {
+        "accuracy": 0,
+        "field7": "None",
+        "field8": "",
+        "provider": "manual",
+        "timestamp": "2016-05-26T16:08:25.183Z",
+        "type": "At Venue"
+    },
+    "teamIds": [
+                "b0589"
+                ],
+    "userId": "67b1b",
+    "deviceId": "547e3ea",
+    "lastModified": "2016-07-05T13:11:42.678Z",
+    "__v": 0,
+    "attachments": [],
+    "id": "7e3e814",
+    "eventId": 1,
+    "url": "https://myObservationTest.com/api/events/1/observations/7e3e814",
+    "state": {
+        "name": "archive",
+        "userId": "5751be",
+        "id": "9496c6",
+        "url": "https://myObservationTest.com/api/events/1/observations/7e3e814/states/9496c6"
+    }
+}

@@ -3,7 +3,7 @@
 //  mage-ios-sdk
 //
 
-#import <XCTest/XCTest.h>
+#import "TestBase.h"
 #import "GPSLocation.h"
 #import "GeoPoint.h"
 #import "Server.h"
@@ -14,8 +14,7 @@
 #import "HttpManager.h"
 
 
-@interface GPSLocationTests : XCTestCase
-@property (nonatomic,retain) NSManagedObjectContext *managedObjectContext;
+@interface GPSLocationTests : TestBase
 @property (nonatomic,retain) NSString *mageServerBaseUrl;
 @property (nonatomic, retain) NSString *serverCurrentEventId;
 @end
@@ -46,11 +45,6 @@
 - (void)setUp {
     [super setUp];
     
-    //Setup in-memory MagicalRecord ManagedObjectContext
-    [MagicalRecord setDefaultModelFromClass:[self class]];
-    [MagicalRecord setupCoreDataStackWithInMemoryStore];
-    self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
-    
     //Setup Server currentEventId
     self.serverCurrentEventId = @"currentEventId";
     NSNumber *currentEventId = [[NSNumber alloc] initWithInt:1];
@@ -66,8 +60,7 @@
 }
 
 - (void)tearDown {
-    self.managedObjectContext = nil;
-    [MagicalRecord cleanUp];
+
     [OHHTTPStubs removeAllStubs];
     
     [super tearDown];
