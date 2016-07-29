@@ -9,6 +9,13 @@ Adheres to [Semantic Versioning](http://semver.org/).
 
 ##### Bug Fixes
 
+## [1.1.1](https://github.com/ngageoint/mage-ios-sdk/releases/tag/1.1.1) (07-25-2016)
+
+##### Features
+
+##### Bug Fixes
+* Change file protection on MAGE database to NSFileProtectionCompleteUnlessOpen.
+
 ## [1.1.0](https://github.com/ngageoint/mage-ios-sdk/releases/tag/1.1.0) (06-15-2016)
 
 ##### Features
