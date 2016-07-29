@@ -50,6 +50,7 @@
 		7557B6E91D42587C007C0EEC /* ObservationTests.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7557B6E81D42587C007C0EEC /* ObservationTests.geojson */; };
 		7564B5AC1CE144CB0094834D /* mage-ios-sdk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7B275521AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld */; };
 		7564B5AE1CE3717E0094834D /* TeamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7564B5AD1CE3717E0094834D /* TeamTests.m */; };
+		7574EF761D4BB011005BBD9A /* ServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7574EF751D4BB011005BBD9A /* ServerTests.m */; };
 		7595154F1CCAA71400F0F758 /* NSDate+Iso8601Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */; };
 		D4A925B09AA700D74C1C8DD6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		EE50EAD87EE5F425FDD754BC /* libPods-mage-ios-sdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C867C12FC8884B5BF6945D2 /* libPods-mage-ios-sdkTests.a */; };
@@ -174,6 +175,7 @@
 		75486E791D49123700DC2E1C /* TestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBase.h; sourceTree = "<group>"; };
 		7557B6E81D42587C007C0EEC /* ObservationTests.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObservationTests.geojson; sourceTree = "<group>"; };
 		7564B5AD1CE3717E0094834D /* TeamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamTests.m; sourceTree = "<group>"; };
+		7574EF751D4BB011005BBD9A /* ServerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerTests.m; sourceTree = "<group>"; };
 		7595154E1CCAA71400F0F758 /* NSDate+Iso8601Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Iso8601Tests.m"; sourceTree = "<group>"; };
 		7C867C12FC8884B5BF6945D2 /* libPods-mage-ios-sdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mage-ios-sdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A402A2B27DB728710F49FEDB /* libPods-mage-ios-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mage-ios-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,6 +395,7 @@
 				7564B5AD1CE3717E0094834D /* TeamTests.m */,
 				75486E771D49122600DC2E1C /* TestBase.m */,
 				75486E791D49123700DC2E1C /* TestBase.h */,
+				7574EF751D4BB011005BBD9A /* ServerTests.m */,
 			);
 			name = Tests;
 			path = "mage-ios-sdkTests";
@@ -717,6 +720,7 @@
 			files = (
 				7564B5AC1CE144CB0094834D /* mage-ios-sdk.xcdatamodeld in Sources */,
 				F768E9C8191D095B003287E3 /* ObservationTests.m in Sources */,
+				7574EF761D4BB011005BBD9A /* ServerTests.m in Sources */,
 				753E314F1CDB82DF00AC6F36 /* GPSLocationTests.m in Sources */,
 				4CAF959218C62E0100A41CB8 /* AuthenticationTests.m in Sources */,
 				75486E781D49122600DC2E1C /* TestBase.m in Sources */,

@@ -2,9 +2,7 @@
 //  TestBase.m
 //  mage-ios-sdk
 //
-//  Created by Chris Wasko on 7/27/16.
-//  Copyright © 2016 National Geospatial-Intelligence Agency. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 #import "TestBase.h"
