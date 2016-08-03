@@ -17,6 +17,7 @@
     [MagicalRecord setupCoreDataStackWithInMemoryStore];
     
     self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
+    
 //    
 //    if (self.dispatchGroup == nil) {
 //        self.dispatchGroup = dispatch_group_create();

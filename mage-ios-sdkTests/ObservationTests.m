@@ -10,9 +10,6 @@
 #import "Attachment.h"
 #import "GeoPoint.h"
 #import "Server.h"
-#import "OHHTTPStubs.h"
-#import <OHHTTPStubs/OHHTTPStubsResponse+JSON.h>
-#import <OHHTTPStubs/OHPathHelpers.h>
 #import "HttpManager.h"
 
 
