@@ -1,958 +1,3276 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0BFE443F328EC1014528B566 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448CD41E33240EA8ADADCAF /* libPods.a */; };
-		0FB180B41FF34E928684A5ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7448CD41E33240EA8ADADCAF /* libPods.a */; };
-		2F01652D199D1C6D00C4862B /* LocationFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01652C199D1C6D00C4862B /* LocationFetchService.m */; };
-		2F01653319A2A88D00C4862B /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01653219A2A88D00C4862B /* LocationService.m */; };
-		2F01653A19A4F11E00C4862B /* NSDate+Iso8601.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01653919A4F11E00C4862B /* NSDate+Iso8601.m */; };
-		2F2A76EB19A7DE8D0008E7DD /* ObservationFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2A76EA19A7DE8D0008E7DD /* ObservationFetchService.m */; };
-		2F5332641CC154C3006E92E1 /* Attachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332391CC154C3006E92E1 /* Attachment.m */; };
-		2F5332661CC154C3006E92E1 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53323D1CC154C3006E92E1 /* Event.m */; };
-		2F5332681CC154C3006E92E1 /* GPSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332411CC154C3006E92E1 /* GPSLocation.m */; };
-		2F53326A1CC154C3006E92E1 /* Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332451CC154C3006E92E1 /* Layer.m */; };
-		2F53326C1CC154C3006E92E1 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332491CC154C3006E92E1 /* Location.m */; };
-		2F53326E1CC154C3006E92E1 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53324D1CC154C3006E92E1 /* Observation.m */; };
-		2F5332701CC154C3006E92E1 /* Role.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332511CC154C3006E92E1 /* Role.m */; };
-		2F5332721CC154C3006E92E1 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332551CC154C3006E92E1 /* Server.m */; };
-		2F5332741CC154C3006E92E1 /* StaticLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332591CC154C3006E92E1 /* StaticLayer.m */; };
-		2F5332761CC154C3006E92E1 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F53325D1CC154C3006E92E1 /* Team.m */; };
-		2F5332781CC154C3006E92E1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332611CC154C3006E92E1 /* User.m */; };
-		2F5332D51CC557F3006E92E1 /* GPSLocation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332C01CC557F3006E92E1 /* GPSLocation+CoreDataProperties.m */; };
-		2F5332D61CC557F3006E92E1 /* Observation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332C21CC557F3006E92E1 /* Observation+CoreDataProperties.m */; };
-		2F5332D71CC557F3006E92E1 /* Attachment+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332C41CC557F3006E92E1 /* Attachment+CoreDataProperties.m */; };
-		2F5332D81CC557F3006E92E1 /* Role+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332C61CC557F3006E92E1 /* Role+CoreDataProperties.m */; };
-		2F5332D91CC557F3006E92E1 /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332C81CC557F3006E92E1 /* Event+CoreDataProperties.m */; };
-		2F5332DA1CC557F3006E92E1 /* Team+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332CA1CC557F3006E92E1 /* Team+CoreDataProperties.m */; };
-		2F5332DB1CC557F3006E92E1 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332CC1CC557F3006E92E1 /* User+CoreDataProperties.m */; };
-		2F5332DC1CC557F3006E92E1 /* Location+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332CE1CC557F3006E92E1 /* Location+CoreDataProperties.m */; };
-		2F5332DD1CC557F3006E92E1 /* Server+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332D01CC557F3006E92E1 /* Server+CoreDataProperties.m */; };
-		2F5332DE1CC557F3006E92E1 /* StaticLayer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332D21CC557F3006E92E1 /* StaticLayer+CoreDataProperties.m */; };
-		2F5332DF1CC557F3006E92E1 /* Layer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5332D41CC557F3006E92E1 /* Layer+CoreDataProperties.m */; };
-		2F58BC261BFBBFE500B3B09D /* OAuthAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58BC251BFBBFE500B3B09D /* OAuthAuthentication.m */; };
-		2F58BC291BFBF64000B3B09D /* MagicalRecord+MAGE.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F58BC281BFBF64000B3B09D /* MagicalRecord+MAGE.m */; };
-		2FC308051A3F91D000FBD2BA /* MagicalRecord+delete.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC308041A3F91D000FBD2BA /* MagicalRecord+delete.m */; };
-		2FFE499819EC347300BC8922 /* MageServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE499719EC347300BC8922 /* MageServer.m */; };
-		4CAF957618C62E0100A41CB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF957518C62E0100A41CB8 /* Foundation.framework */; };
-		4CAF958418C62E0100A41CB8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF958318C62E0100A41CB8 /* XCTest.framework */; };
-		4CAF958518C62E0100A41CB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF957518C62E0100A41CB8 /* Foundation.framework */; };
-		4CAF958718C62E0100A41CB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF958618C62E0100A41CB8 /* UIKit.framework */; };
-		4CAF958A18C62E0100A41CB8 /* libmage-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAF957218C62E0100A41CB8 /* libmage-ios-sdk.a */; };
-		4CAF959018C62E0100A41CB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CAF958E18C62E0100A41CB8 /* InfoPlist.strings */; };
-		4CAF959218C62E0100A41CB8 /* AuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF959118C62E0100A41CB8 /* AuthenticationTests.m */; };
-		4CAF95A018C62F7C00A41CB8 /* LocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */; };
-		4CAF95A318C6616300A41CB8 /* Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF95A218C6616300A41CB8 /* Authentication.m */; };
-		DC60A150C17F48CB9750FE39 /* libPods-mage-ios-sdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6B303D58044552B6770497 /* libPods-mage-ios-sdkTests.a */; };
-		F75DD31A1A9F9F230007FA3F /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = F75DD3191A9F9F230007FA3F /* NSString+Contains.m */; };
-		F76655861A30EAEB00558EBB /* AttachmentPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = F76655851A30EAEB00558EBB /* AttachmentPushService.m */; };
-		F768E9C8191D095B003287E3 /* ObservationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F768E9C7191D095B003287E3 /* ObservationTests.m */; };
-		F768E9CB191D0E6E003287E3 /* ServerAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = F768E9CA191D0E6E003287E3 /* ServerAuthentication.m */; };
-		F768E9CE191D1C7B003287E3 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F768E9CD191D1C7B003287E3 /* HttpManager.m */; };
-		F7971BD61A03F50D001505F0 /* ObservationPushService.m in Sources */ = {isa = PBXBuildFile; fileRef = F7971BD51A03F50D001505F0 /* ObservationPushService.m */; };
-		F7A87F351AA51695001AEDF4 /* Mage.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A87F341AA51695001AEDF4 /* Mage.m */; };
-		F7B25E1F191AA21900589E5B /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B25E1E191AA21900589E5B /* Geometry.m */; };
-		F7B25E22191AA8CE00589E5B /* GeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B25E21191AA8CE00589E5B /* GeoPoint.m */; };
-		F7B25E24191AB5A900589E5B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B25E23191AB5A900589E5B /* CoreLocation.framework */; };
-		F7B275591AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7B275521AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld */; };
-		F7B679751959CF2D0035596A /* MageEnums.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B679741959CF2D0035596A /* MageEnums.m */; };
-		F7C5FB7B195DDFF30065379C /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C5FB7A195DDFF30065379C /* Form.m */; };
-		F7F133621975857000E79762 /* UserUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F133611975857000E79762 /* UserUtility.m */; };
-		F7F7B7D91A6EDE1100270D61 /* StoredPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F7B7D81A6EDE1100270D61 /* StoredPassword.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4CAF958818C62E0100A41CB8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CAF956A18C62E0100A41CB8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4CAF957118C62E0100A41CB8;
-			remoteInfo = "mage-ios-sdk";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4CAF957018C62E0100A41CB8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
-/* Begin PBXFileReference section */
-		0B43815519D5CF6AF74F5F61 /* Pods-mage-ios-sdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mage-ios-sdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1FFAEE42C21F68388710D523 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		2C6B303D58044552B6770497 /* libPods-mage-ios-sdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mage-ios-sdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F01652B199D1C6D00C4862B /* LocationFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationFetchService.h; path = MAGE/LocationFetchService.h; sourceTree = SOURCE_ROOT; };
-		2F01652C199D1C6D00C4862B /* LocationFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationFetchService.m; path = MAGE/LocationFetchService.m; sourceTree = SOURCE_ROOT; };
-		2F01653119A2A88D00C4862B /* LocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationService.h; path = MAGE/LocationService.h; sourceTree = SOURCE_ROOT; };
-		2F01653219A2A88D00C4862B /* LocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationService.m; path = MAGE/LocationService.m; sourceTree = SOURCE_ROOT; };
-		2F01653819A4F11E00C4862B /* NSDate+Iso8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Iso8601.h"; path = "MAGE/NSDate+Iso8601.h"; sourceTree = SOURCE_ROOT; };
-		2F01653919A4F11E00C4862B /* NSDate+Iso8601.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Iso8601.m"; path = "MAGE/NSDate+Iso8601.m"; sourceTree = SOURCE_ROOT; };
-		2F2A76E919A7DE8D0008E7DD /* ObservationFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservationFetchService.h; path = MAGE/ObservationFetchService.h; sourceTree = SOURCE_ROOT; };
-		2F2A76EA19A7DE8D0008E7DD /* ObservationFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObservationFetchService.m; path = MAGE/ObservationFetchService.m; sourceTree = SOURCE_ROOT; };
-		2F3A26451CBF1A6E00BE50D3 /* mage-ios-sdk 8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk 8.xcdatamodel"; sourceTree = "<group>"; };
-		2F5332381CC154C3006E92E1 /* Attachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attachment.h; path = MAGE/Attachment.h; sourceTree = SOURCE_ROOT; };
-		2F5332391CC154C3006E92E1 /* Attachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Attachment.m; path = MAGE/Attachment.m; sourceTree = SOURCE_ROOT; };
-		2F53323C1CC154C3006E92E1 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = MAGE/Event.h; sourceTree = SOURCE_ROOT; };
-		2F53323D1CC154C3006E92E1 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = MAGE/Event.m; sourceTree = SOURCE_ROOT; };
-		2F5332401CC154C3006E92E1 /* GPSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPSLocation.h; path = MAGE/GPSLocation.h; sourceTree = SOURCE_ROOT; };
-		2F5332411CC154C3006E92E1 /* GPSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPSLocation.m; path = MAGE/GPSLocation.m; sourceTree = SOURCE_ROOT; };
-		2F5332441CC154C3006E92E1 /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layer.h; path = MAGE/Layer.h; sourceTree = SOURCE_ROOT; };
-		2F5332451CC154C3006E92E1 /* Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layer.m; path = MAGE/Layer.m; sourceTree = SOURCE_ROOT; };
-		2F5332481CC154C3006E92E1 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Location.h; path = MAGE/Location.h; sourceTree = SOURCE_ROOT; };
-		2F5332491CC154C3006E92E1 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Location.m; path = MAGE/Location.m; sourceTree = SOURCE_ROOT; };
-		2F53324C1CC154C3006E92E1 /* Observation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Observation.h; path = MAGE/Observation.h; sourceTree = SOURCE_ROOT; };
-		2F53324D1CC154C3006E92E1 /* Observation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Observation.m; path = MAGE/Observation.m; sourceTree = SOURCE_ROOT; };
-		2F5332501CC154C3006E92E1 /* Role.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Role.h; path = MAGE/Role.h; sourceTree = SOURCE_ROOT; };
-		2F5332511CC154C3006E92E1 /* Role.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Role.m; path = MAGE/Role.m; sourceTree = SOURCE_ROOT; };
-		2F5332541CC154C3006E92E1 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Server.h; path = MAGE/Server.h; sourceTree = SOURCE_ROOT; };
-		2F5332551CC154C3006E92E1 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Server.m; path = MAGE/Server.m; sourceTree = SOURCE_ROOT; };
-		2F5332581CC154C3006E92E1 /* StaticLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StaticLayer.h; path = MAGE/StaticLayer.h; sourceTree = SOURCE_ROOT; };
-		2F5332591CC154C3006E92E1 /* StaticLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StaticLayer.m; path = MAGE/StaticLayer.m; sourceTree = SOURCE_ROOT; };
-		2F53325C1CC154C3006E92E1 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Team.h; path = MAGE/Team.h; sourceTree = SOURCE_ROOT; };
-		2F53325D1CC154C3006E92E1 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Team.m; path = MAGE/Team.m; sourceTree = SOURCE_ROOT; };
-		2F5332601CC154C3006E92E1 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = MAGE/User.h; sourceTree = SOURCE_ROOT; };
-		2F5332611CC154C3006E92E1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = MAGE/User.m; sourceTree = SOURCE_ROOT; };
-		2F5332BF1CC557F3006E92E1 /* GPSLocation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GPSLocation+CoreDataProperties.h"; path = "MAGE/GPSLocation+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332C01CC557F3006E92E1 /* GPSLocation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GPSLocation+CoreDataProperties.m"; path = "MAGE/GPSLocation+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332C11CC557F3006E92E1 /* Observation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Observation+CoreDataProperties.h"; path = "MAGE/Observation+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332C21CC557F3006E92E1 /* Observation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Observation+CoreDataProperties.m"; path = "MAGE/Observation+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332C31CC557F3006E92E1 /* Attachment+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Attachment+CoreDataProperties.h"; path = "MAGE/Attachment+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332C41CC557F3006E92E1 /* Attachment+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Attachment+CoreDataProperties.m"; path = "MAGE/Attachment+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332C51CC557F3006E92E1 /* Role+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Role+CoreDataProperties.h"; path = "MAGE/Role+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332C61CC557F3006E92E1 /* Role+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Role+CoreDataProperties.m"; path = "MAGE/Role+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332C71CC557F3006E92E1 /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Event+CoreDataProperties.h"; path = "MAGE/Event+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332C81CC557F3006E92E1 /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Event+CoreDataProperties.m"; path = "MAGE/Event+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332C91CC557F3006E92E1 /* Team+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Team+CoreDataProperties.h"; path = "MAGE/Team+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332CA1CC557F3006E92E1 /* Team+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Team+CoreDataProperties.m"; path = "MAGE/Team+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332CB1CC557F3006E92E1 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "User+CoreDataProperties.h"; path = "MAGE/User+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332CC1CC557F3006E92E1 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "User+CoreDataProperties.m"; path = "MAGE/User+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332CD1CC557F3006E92E1 /* Location+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Location+CoreDataProperties.h"; path = "MAGE/Location+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332CE1CC557F3006E92E1 /* Location+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Location+CoreDataProperties.m"; path = "MAGE/Location+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332CF1CC557F3006E92E1 /* Server+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Server+CoreDataProperties.h"; path = "MAGE/Server+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332D01CC557F3006E92E1 /* Server+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Server+CoreDataProperties.m"; path = "MAGE/Server+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332D11CC557F3006E92E1 /* StaticLayer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "StaticLayer+CoreDataProperties.h"; path = "MAGE/StaticLayer+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332D21CC557F3006E92E1 /* StaticLayer+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "StaticLayer+CoreDataProperties.m"; path = "MAGE/StaticLayer+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F5332D31CC557F3006E92E1 /* Layer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Layer+CoreDataProperties.h"; path = "MAGE/Layer+CoreDataProperties.h"; sourceTree = SOURCE_ROOT; };
-		2F5332D41CC557F3006E92E1 /* Layer+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Layer+CoreDataProperties.m"; path = "MAGE/Layer+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
-		2F58BC241BFBBFE500B3B09D /* OAuthAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthAuthentication.h; path = MAGE/OAuthAuthentication.h; sourceTree = SOURCE_ROOT; };
-		2F58BC251BFBBFE500B3B09D /* OAuthAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuthAuthentication.m; path = MAGE/OAuthAuthentication.m; sourceTree = SOURCE_ROOT; };
-		2F58BC271BFBF64000B3B09D /* MagicalRecord+MAGE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+MAGE.h"; path = "MAGE/MagicalRecord+MAGE.h"; sourceTree = SOURCE_ROOT; };
-		2F58BC281BFBF64000B3B09D /* MagicalRecord+MAGE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+MAGE.m"; path = "MAGE/MagicalRecord+MAGE.m"; sourceTree = SOURCE_ROOT; };
-		2FC308011A3F83DF00FBD2BA /* mage-ios-sdk-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mage-ios-sdk-Prefix.pch"; path = "MAGE/mage-ios-sdk-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		2FC308031A3F91D000FBD2BA /* MagicalRecord+delete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MagicalRecord+delete.h"; path = "MAGE/MagicalRecord+delete.h"; sourceTree = SOURCE_ROOT; };
-		2FC308041A3F91D000FBD2BA /* MagicalRecord+delete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MagicalRecord+delete.m"; path = "MAGE/MagicalRecord+delete.m"; sourceTree = SOURCE_ROOT; };
-		2FFE499619EC347300BC8922 /* MageServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MageServer.h; path = MAGE/MageServer.h; sourceTree = SOURCE_ROOT; };
-		2FFE499719EC347300BC8922 /* MageServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MageServer.m; path = MAGE/MageServer.m; sourceTree = SOURCE_ROOT; };
-		420659603566C15B6C6D5621 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		4CAF957218C62E0100A41CB8 /* libmage-ios-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmage-ios-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CAF957518C62E0100A41CB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4CAF958218C62E0100A41CB8 /* mage-ios-sdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mage-ios-sdkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CAF958318C62E0100A41CB8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4CAF958618C62E0100A41CB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		4CAF958D18C62E0100A41CB8 /* mage-ios-sdkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mage-ios-sdkTests-Info.plist"; sourceTree = "<group>"; };
-		4CAF958F18C62E0100A41CB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4CAF959118C62E0100A41CB8 /* AuthenticationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationTests.m; sourceTree = "<group>"; };
-		4CAF959E18C62F7C00A41CB8 /* LocalAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalAuthentication.h; path = MAGE/LocalAuthentication.h; sourceTree = SOURCE_ROOT; };
-		4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalAuthentication.m; path = MAGE/LocalAuthentication.m; sourceTree = SOURCE_ROOT; };
-		4CAF95A118C62FA000A41CB8 /* Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Authentication.h; path = MAGE/Authentication.h; sourceTree = SOURCE_ROOT; };
-		4CAF95A218C6616300A41CB8 /* Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Authentication.m; path = MAGE/Authentication.m; sourceTree = SOURCE_ROOT; };
-		7448CD41E33240EA8ADADCAF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C10ECB13D9EB8312ECFFD635 /* libPods-mage-ios-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mage-ios-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF92406987D799C2D14562A9 /* Pods-mage-ios-sdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mage-ios-sdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests.release.xcconfig"; sourceTree = "<group>"; };
-		F75DD3181A9F9F230007FA3F /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Contains.h"; path = "MAGE/NSString+Contains.h"; sourceTree = SOURCE_ROOT; };
-		F75DD3191A9F9F230007FA3F /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Contains.m"; path = "MAGE/NSString+Contains.m"; sourceTree = SOURCE_ROOT; };
-		F76655841A30EAEB00558EBB /* AttachmentPushService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttachmentPushService.h; path = MAGE/AttachmentPushService.h; sourceTree = SOURCE_ROOT; };
-		F76655851A30EAEB00558EBB /* AttachmentPushService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttachmentPushService.m; path = MAGE/AttachmentPushService.m; sourceTree = SOURCE_ROOT; };
-		F768E9C7191D095B003287E3 /* ObservationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservationTests.m; sourceTree = "<group>"; };
-		F768E9C9191D0E6E003287E3 /* ServerAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerAuthentication.h; path = MAGE/ServerAuthentication.h; sourceTree = SOURCE_ROOT; };
-		F768E9CA191D0E6E003287E3 /* ServerAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerAuthentication.m; path = MAGE/ServerAuthentication.m; sourceTree = SOURCE_ROOT; };
-		F768E9CC191D1C7B003287E3 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpManager.h; path = MAGE/HttpManager.h; sourceTree = SOURCE_ROOT; };
-		F768E9CD191D1C7B003287E3 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpManager.m; path = MAGE/HttpManager.m; sourceTree = SOURCE_ROOT; };
-		F7971BD41A03F50D001505F0 /* ObservationPushService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObservationPushService.h; path = MAGE/ObservationPushService.h; sourceTree = SOURCE_ROOT; };
-		F7971BD51A03F50D001505F0 /* ObservationPushService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObservationPushService.m; path = MAGE/ObservationPushService.m; sourceTree = SOURCE_ROOT; };
-		F7A87F331AA51695001AEDF4 /* Mage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mage.h; path = MAGE/Mage.h; sourceTree = SOURCE_ROOT; };
-		F7A87F341AA51695001AEDF4 /* Mage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mage.m; path = MAGE/Mage.m; sourceTree = SOURCE_ROOT; };
-		F7B25E1D191AA21900589E5B /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Geometry.h; path = MAGE/Geometry.h; sourceTree = SOURCE_ROOT; };
-		F7B25E1E191AA21900589E5B /* Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Geometry.m; path = MAGE/Geometry.m; sourceTree = SOURCE_ROOT; };
-		F7B25E20191AA8CE00589E5B /* GeoPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoPoint.h; path = MAGE/GeoPoint.h; sourceTree = SOURCE_ROOT; };
-		F7B25E21191AA8CE00589E5B /* GeoPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoPoint.m; path = MAGE/GeoPoint.m; sourceTree = SOURCE_ROOT; };
-		F7B25E23191AB5A900589E5B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F7B275531AA108F000DD72DE /* mage-ios-sdk 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk 2.xcdatamodel"; sourceTree = "<group>"; };
-		F7B275541AA108F000DD72DE /* mage-ios-sdk 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk 3.xcdatamodel"; sourceTree = "<group>"; };
-		F7B275551AA108F000DD72DE /* mage-ios-sdk 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk 4.xcdatamodel"; sourceTree = "<group>"; };
-		F7B275561AA108F000DD72DE /* mage-ios-sdk 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk 5.xcdatamodel"; sourceTree = "<group>"; };
-		F7B275571AA108F000DD72DE /* mage-ios-sdk 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk 6.xcdatamodel"; sourceTree = "<group>"; };
-		F7B275581AA108F000DD72DE /* mage-ios-sdk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk.xcdatamodel"; sourceTree = "<group>"; };
-		F7B2755A1AA4D91B00DD72DE /* mage-ios-sdk 7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "mage-ios-sdk 7.xcdatamodel"; sourceTree = "<group>"; };
-		F7B679731959CF2D0035596A /* MageEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MageEnums.h; path = MAGE/MageEnums.h; sourceTree = SOURCE_ROOT; };
-		F7B679741959CF2D0035596A /* MageEnums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MageEnums.m; path = MAGE/MageEnums.m; sourceTree = SOURCE_ROOT; };
-		F7C5FB79195DDFF30065379C /* Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Form.h; path = MAGE/Form.h; sourceTree = SOURCE_ROOT; };
-		F7C5FB7A195DDFF30065379C /* Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Form.m; path = MAGE/Form.m; sourceTree = SOURCE_ROOT; };
-		F7DEF9251912BD2D0026B9D0 /* preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = preferences.plist; path = MAGE/preferences.plist; sourceTree = SOURCE_ROOT; };
-		F7F133601975857000E79762 /* UserUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserUtility.h; path = MAGE/UserUtility.h; sourceTree = SOURCE_ROOT; };
-		F7F133611975857000E79762 /* UserUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserUtility.m; path = MAGE/UserUtility.m; sourceTree = SOURCE_ROOT; };
-		F7F7B7D71A6EDE1100270D61 /* StoredPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoredPassword.h; path = MAGE/StoredPassword.h; sourceTree = SOURCE_ROOT; };
-		F7F7B7D81A6EDE1100270D61 /* StoredPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoredPassword.m; path = MAGE/StoredPassword.m; sourceTree = SOURCE_ROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		4CAF956F18C62E0100A41CB8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7B25E24191AB5A900589E5B /* CoreLocation.framework in Frameworks */,
-				4CAF957618C62E0100A41CB8 /* Foundation.framework in Frameworks */,
-				0FB180B41FF34E928684A5ED /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CAF957F18C62E0100A41CB8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CAF958518C62E0100A41CB8 /* Foundation.framework in Frameworks */,
-				4CAF958418C62E0100A41CB8 /* XCTest.framework in Frameworks */,
-				0BFE443F328EC1014528B566 /* libPods.a in Frameworks */,
-				4CAF958A18C62E0100A41CB8 /* libmage-ios-sdk.a in Frameworks */,
-				4CAF958718C62E0100A41CB8 /* UIKit.framework in Frameworks */,
-				DC60A150C17F48CB9750FE39 /* libPods-mage-ios-sdkTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		0E9719FF0451A9B76EBB780F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				420659603566C15B6C6D5621 /* Pods.debug.xcconfig */,
-				1FFAEE42C21F68388710D523 /* Pods.release.xcconfig */,
-				0B43815519D5CF6AF74F5F61 /* Pods-mage-ios-sdkTests.debug.xcconfig */,
-				CF92406987D799C2D14562A9 /* Pods-mage-ios-sdkTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2F016527199CF36E00C4862B /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				2F01652B199D1C6D00C4862B /* LocationFetchService.h */,
-				2F01652C199D1C6D00C4862B /* LocationFetchService.m */,
-				2F01653119A2A88D00C4862B /* LocationService.h */,
-				2F01653219A2A88D00C4862B /* LocationService.m */,
-			);
-			name = Location;
-			sourceTree = "<group>";
-		};
-		2F01653719A4EFB000C4862B /* Date */ = {
-			isa = PBXGroup;
-			children = (
-				2F01653819A4F11E00C4862B /* NSDate+Iso8601.h */,
-				2F01653919A4F11E00C4862B /* NSDate+Iso8601.m */,
-			);
-			name = Date;
-			sourceTree = "<group>";
-		};
-		2F2A76E819A7DE770008E7DD /* Observation */ = {
-			isa = PBXGroup;
-			children = (
-				2F2A76E919A7DE8D0008E7DD /* ObservationFetchService.h */,
-				2F2A76EA19A7DE8D0008E7DD /* ObservationFetchService.m */,
-				F7971BD41A03F50D001505F0 /* ObservationPushService.h */,
-				F7971BD51A03F50D001505F0 /* ObservationPushService.m */,
-				F76655841A30EAEB00558EBB /* AttachmentPushService.h */,
-				F76655851A30EAEB00558EBB /* AttachmentPushService.m */,
-			);
-			name = Observation;
-			sourceTree = "<group>";
-		};
-		2FC308021A3F916600FBD2BA /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				2FC308031A3F91D000FBD2BA /* MagicalRecord+delete.h */,
-				2FC308041A3F91D000FBD2BA /* MagicalRecord+delete.m */,
-				F75DD3181A9F9F230007FA3F /* NSString+Contains.h */,
-				F75DD3191A9F9F230007FA3F /* NSString+Contains.m */,
-				2F58BC271BFBF64000B3B09D /* MagicalRecord+MAGE.h */,
-				2F58BC281BFBF64000B3B09D /* MagicalRecord+MAGE.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		2FF74A4E1BEBFD3A00416090 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				4CAF95A118C62FA000A41CB8 /* Authentication.h */,
-				4CAF95A218C6616300A41CB8 /* Authentication.m */,
-				4CAF959E18C62F7C00A41CB8 /* LocalAuthentication.h */,
-				4CAF959F18C62F7C00A41CB8 /* LocalAuthentication.m */,
-				F768E9C9191D0E6E003287E3 /* ServerAuthentication.h */,
-				F768E9CA191D0E6E003287E3 /* ServerAuthentication.m */,
-				2F58BC241BFBBFE500B3B09D /* OAuthAuthentication.h */,
-				2F58BC251BFBBFE500B3B09D /* OAuthAuthentication.m */,
-			);
-			name = Authentication;
-			sourceTree = "<group>";
-		};
-		4CAF956918C62E0100A41CB8 = {
-			isa = PBXGroup;
-			children = (
-				F7B275521AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld */,
-				4CAF957718C62E0100A41CB8 /* MAGE */,
-				4CAF957818C62E0100A41CB8 /* Supporting Files */,
-				4CAF958B18C62E0100A41CB8 /* Tests */,
-				4CAF957418C62E0100A41CB8 /* Frameworks */,
-				4CAF957318C62E0100A41CB8 /* Products */,
-				0E9719FF0451A9B76EBB780F /* Pods */,
-			);
-			sourceTree = "<group>";
-		};
-		4CAF957318C62E0100A41CB8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4CAF957218C62E0100A41CB8 /* libmage-ios-sdk.a */,
-				4CAF958218C62E0100A41CB8 /* mage-ios-sdkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4CAF957418C62E0100A41CB8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F7B25E23191AB5A900589E5B /* CoreLocation.framework */,
-				4CAF957518C62E0100A41CB8 /* Foundation.framework */,
-				4CAF958318C62E0100A41CB8 /* XCTest.framework */,
-				4CAF958618C62E0100A41CB8 /* UIKit.framework */,
-				7448CD41E33240EA8ADADCAF /* libPods.a */,
-				2C6B303D58044552B6770497 /* libPods-mage-ios-sdkTests.a */,
-				C10ECB13D9EB8312ECFFD635 /* libPods-mage-ios-sdk.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4CAF957718C62E0100A41CB8 /* MAGE */ = {
-			isa = PBXGroup;
-			children = (
-				2FF74A4E1BEBFD3A00416090 /* Authentication */,
-				2FC308021A3F916600FBD2BA /* Categories */,
-				2F2A76E819A7DE770008E7DD /* Observation */,
-				2F01653719A4EFB000C4862B /* Date */,
-				2F016527199CF36E00C4862B /* Location */,
-				F7F1335F1975855200E79762 /* Utilities */,
-				F7E35845191BDF3B004EA79D /* Geo */,
-				F7E35844191BDF29004EA79D /* Models */,
-				F768E9CC191D1C7B003287E3 /* HttpManager.h */,
-				F768E9CD191D1C7B003287E3 /* HttpManager.m */,
-				2FFE499619EC347300BC8922 /* MageServer.h */,
-				2FFE499719EC347300BC8922 /* MageServer.m */,
-				F7F7B7D71A6EDE1100270D61 /* StoredPassword.h */,
-				F7F7B7D81A6EDE1100270D61 /* StoredPassword.m */,
-				F7A87F331AA51695001AEDF4 /* Mage.h */,
-				F7A87F341AA51695001AEDF4 /* Mage.m */,
-			);
-			name = MAGE;
-			path = "mage-ios-sdk";
-			sourceTree = "<group>";
-		};
-		4CAF957818C62E0100A41CB8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2FC308011A3F83DF00FBD2BA /* mage-ios-sdk-Prefix.pch */,
-				F7DEF9251912BD2D0026B9D0 /* preferences.plist */,
-			);
-			name = "Supporting Files";
-			path = "mage-ios-sdk";
-			sourceTree = "<group>";
-		};
-		4CAF958B18C62E0100A41CB8 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				4CAF959118C62E0100A41CB8 /* AuthenticationTests.m */,
-				F768E9C7191D095B003287E3 /* ObservationTests.m */,
-				4CAF958C18C62E0100A41CB8 /* Supporting Files */,
-			);
-			name = Tests;
-			path = "mage-ios-sdkTests";
-			sourceTree = "<group>";
-		};
-		4CAF958C18C62E0100A41CB8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4CAF958D18C62E0100A41CB8 /* mage-ios-sdkTests-Info.plist */,
-				4CAF958E18C62E0100A41CB8 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F739EFF31AB1E41E003A6E4B /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				2F5332BF1CC557F3006E92E1 /* GPSLocation+CoreDataProperties.h */,
-				2F5332C01CC557F3006E92E1 /* GPSLocation+CoreDataProperties.m */,
-				2F5332C11CC557F3006E92E1 /* Observation+CoreDataProperties.h */,
-				2F5332C21CC557F3006E92E1 /* Observation+CoreDataProperties.m */,
-				2F5332C31CC557F3006E92E1 /* Attachment+CoreDataProperties.h */,
-				2F5332C41CC557F3006E92E1 /* Attachment+CoreDataProperties.m */,
-				2F5332C51CC557F3006E92E1 /* Role+CoreDataProperties.h */,
-				2F5332C61CC557F3006E92E1 /* Role+CoreDataProperties.m */,
-				2F5332C71CC557F3006E92E1 /* Event+CoreDataProperties.h */,
-				2F5332C81CC557F3006E92E1 /* Event+CoreDataProperties.m */,
-				2F5332C91CC557F3006E92E1 /* Team+CoreDataProperties.h */,
-				2F5332CA1CC557F3006E92E1 /* Team+CoreDataProperties.m */,
-				2F5332CB1CC557F3006E92E1 /* User+CoreDataProperties.h */,
-				2F5332CC1CC557F3006E92E1 /* User+CoreDataProperties.m */,
-				2F5332CD1CC557F3006E92E1 /* Location+CoreDataProperties.h */,
-				2F5332CE1CC557F3006E92E1 /* Location+CoreDataProperties.m */,
-				2F5332CF1CC557F3006E92E1 /* Server+CoreDataProperties.h */,
-				2F5332D01CC557F3006E92E1 /* Server+CoreDataProperties.m */,
-				2F5332D11CC557F3006E92E1 /* StaticLayer+CoreDataProperties.h */,
-				2F5332D21CC557F3006E92E1 /* StaticLayer+CoreDataProperties.m */,
-				2F5332D31CC557F3006E92E1 /* Layer+CoreDataProperties.h */,
-				2F5332D41CC557F3006E92E1 /* Layer+CoreDataProperties.m */,
-				2F5332381CC154C3006E92E1 /* Attachment.h */,
-				2F5332391CC154C3006E92E1 /* Attachment.m */,
-				2F53323C1CC154C3006E92E1 /* Event.h */,
-				2F53323D1CC154C3006E92E1 /* Event.m */,
-				2F5332401CC154C3006E92E1 /* GPSLocation.h */,
-				2F5332411CC154C3006E92E1 /* GPSLocation.m */,
-				2F5332441CC154C3006E92E1 /* Layer.h */,
-				2F5332451CC154C3006E92E1 /* Layer.m */,
-				2F5332481CC154C3006E92E1 /* Location.h */,
-				2F5332491CC154C3006E92E1 /* Location.m */,
-				2F53324C1CC154C3006E92E1 /* Observation.h */,
-				2F53324D1CC154C3006E92E1 /* Observation.m */,
-				2F5332501CC154C3006E92E1 /* Role.h */,
-				2F5332511CC154C3006E92E1 /* Role.m */,
-				2F5332541CC154C3006E92E1 /* Server.h */,
-				2F5332551CC154C3006E92E1 /* Server.m */,
-				2F5332581CC154C3006E92E1 /* StaticLayer.h */,
-				2F5332591CC154C3006E92E1 /* StaticLayer.m */,
-				2F53325C1CC154C3006E92E1 /* Team.h */,
-				2F53325D1CC154C3006E92E1 /* Team.m */,
-				2F5332601CC154C3006E92E1 /* User.h */,
-				2F5332611CC154C3006E92E1 /* User.m */,
-			);
-			name = CoreData;
-			sourceTree = "<group>";
-		};
-		F7E35844191BDF29004EA79D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F739EFF31AB1E41E003A6E4B /* CoreData */,
-				F7C5FB79195DDFF30065379C /* Form.h */,
-				F7C5FB7A195DDFF30065379C /* Form.m */,
-				F7B679731959CF2D0035596A /* MageEnums.h */,
-				F7B679741959CF2D0035596A /* MageEnums.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		F7E35845191BDF3B004EA79D /* Geo */ = {
-			isa = PBXGroup;
-			children = (
-				F7B25E1D191AA21900589E5B /* Geometry.h */,
-				F7B25E1E191AA21900589E5B /* Geometry.m */,
-				F7B25E20191AA8CE00589E5B /* GeoPoint.h */,
-				F7B25E21191AA8CE00589E5B /* GeoPoint.m */,
-			);
-			name = Geo;
-			sourceTree = "<group>";
-		};
-		F7F1335F1975855200E79762 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				F7F133601975857000E79762 /* UserUtility.h */,
-				F7F133611975857000E79762 /* UserUtility.m */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		4CAF957118C62E0100A41CB8 /* mage-ios-sdk */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CAF959518C62E0100A41CB8 /* Build configuration list for PBXNativeTarget "mage-ios-sdk" */;
-			buildPhases = (
-				CEB7D5DA02F14DA6A8F72D28 /* Check Pods Manifest.lock */,
-				4CAF956E18C62E0100A41CB8 /* Sources */,
-				4CAF956F18C62E0100A41CB8 /* Frameworks */,
-				4CAF957018C62E0100A41CB8 /* CopyFiles */,
-				2F13A3D225A843E1AFCBF9AC /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "mage-ios-sdk";
-			productName = "mage-ios-sdk";
-			productReference = 4CAF957218C62E0100A41CB8 /* libmage-ios-sdk.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		4CAF958118C62E0100A41CB8 /* mage-ios-sdkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CAF959818C62E0100A41CB8 /* Build configuration list for PBXNativeTarget "mage-ios-sdkTests" */;
-			buildPhases = (
-				9F0ED94149BE42F9A95F6F9A /* Check Pods Manifest.lock */,
-				4CAF957E18C62E0100A41CB8 /* Sources */,
-				4CAF957F18C62E0100A41CB8 /* Frameworks */,
-				4CAF958018C62E0100A41CB8 /* Resources */,
-				4EEDD4E54E09461995939811 /* Copy Pods Resources */,
-				CE1B223D09CCAE1B6F1B28D6 /* Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4CAF958918C62E0100A41CB8 /* PBXTargetDependency */,
-			);
-			name = "mage-ios-sdkTests";
-			productName = "mage-ios-sdkTests";
-			productReference = 4CAF958218C62E0100A41CB8 /* mage-ios-sdkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		4CAF956A18C62E0100A41CB8 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "National Geospatial-Intelligence Agency";
-			};
-			buildConfigurationList = 4CAF956D18C62E0100A41CB8 /* Build configuration list for PBXProject "mage-ios-sdk" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 4CAF956918C62E0100A41CB8;
-			productRefGroup = 4CAF957318C62E0100A41CB8 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				4CAF957118C62E0100A41CB8 /* mage-ios-sdk */,
-				4CAF958118C62E0100A41CB8 /* mage-ios-sdkTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		4CAF958018C62E0100A41CB8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CAF959018C62E0100A41CB8 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2F13A3D225A843E1AFCBF9AC /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4EEDD4E54E09461995939811 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F0ED94149BE42F9A95F6F9A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CE1B223D09CCAE1B6F1B28D6 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CEB7D5DA02F14DA6A8F72D28 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		4CAF956E18C62E0100A41CB8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F2A76EB19A7DE8D0008E7DD /* ObservationFetchService.m in Sources */,
-				2F5332DC1CC557F3006E92E1 /* Location+CoreDataProperties.m in Sources */,
-				2FFE499819EC347300BC8922 /* MageServer.m in Sources */,
-				2F5332681CC154C3006E92E1 /* GPSLocation.m in Sources */,
-				2F5332DD1CC557F3006E92E1 /* Server+CoreDataProperties.m in Sources */,
-				F7F133621975857000E79762 /* UserUtility.m in Sources */,
-				F76655861A30EAEB00558EBB /* AttachmentPushService.m in Sources */,
-				2F58BC261BFBBFE500B3B09D /* OAuthAuthentication.m in Sources */,
-				2F01653319A2A88D00C4862B /* LocationService.m in Sources */,
-				2F53326E1CC154C3006E92E1 /* Observation.m in Sources */,
-				F7A87F351AA51695001AEDF4 /* Mage.m in Sources */,
-				2F01652D199D1C6D00C4862B /* LocationFetchService.m in Sources */,
-				2F5332641CC154C3006E92E1 /* Attachment.m in Sources */,
-				F7B25E1F191AA21900589E5B /* Geometry.m in Sources */,
-				F7F7B7D91A6EDE1100270D61 /* StoredPassword.m in Sources */,
-				2F58BC291BFBF64000B3B09D /* MagicalRecord+MAGE.m in Sources */,
-				2F5332DB1CC557F3006E92E1 /* User+CoreDataProperties.m in Sources */,
-				F7B275591AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld in Sources */,
-				F768E9CE191D1C7B003287E3 /* HttpManager.m in Sources */,
-				F75DD31A1A9F9F230007FA3F /* NSString+Contains.m in Sources */,
-				2F5332D81CC557F3006E92E1 /* Role+CoreDataProperties.m in Sources */,
-				F7971BD61A03F50D001505F0 /* ObservationPushService.m in Sources */,
-				2F5332DA1CC557F3006E92E1 /* Team+CoreDataProperties.m in Sources */,
-				2F5332DF1CC557F3006E92E1 /* Layer+CoreDataProperties.m in Sources */,
-				2F5332661CC154C3006E92E1 /* Event.m in Sources */,
-				2F5332701CC154C3006E92E1 /* Role.m in Sources */,
-				2F5332D51CC557F3006E92E1 /* GPSLocation+CoreDataProperties.m in Sources */,
-				2F5332D71CC557F3006E92E1 /* Attachment+CoreDataProperties.m in Sources */,
-				F7B679751959CF2D0035596A /* MageEnums.m in Sources */,
-				2F5332781CC154C3006E92E1 /* User.m in Sources */,
-				2F5332D91CC557F3006E92E1 /* Event+CoreDataProperties.m in Sources */,
-				2F5332D61CC557F3006E92E1 /* Observation+CoreDataProperties.m in Sources */,
-				2F53326A1CC154C3006E92E1 /* Layer.m in Sources */,
-				F768E9CB191D0E6E003287E3 /* ServerAuthentication.m in Sources */,
-				2F5332741CC154C3006E92E1 /* StaticLayer.m in Sources */,
-				2F5332721CC154C3006E92E1 /* Server.m in Sources */,
-				2F5332DE1CC557F3006E92E1 /* StaticLayer+CoreDataProperties.m in Sources */,
-				4CAF95A318C6616300A41CB8 /* Authentication.m in Sources */,
-				F7B25E22191AA8CE00589E5B /* GeoPoint.m in Sources */,
-				2FC308051A3F91D000FBD2BA /* MagicalRecord+delete.m in Sources */,
-				F7C5FB7B195DDFF30065379C /* Form.m in Sources */,
-				4CAF95A018C62F7C00A41CB8 /* LocalAuthentication.m in Sources */,
-				2F53326C1CC154C3006E92E1 /* Location.m in Sources */,
-				2F5332761CC154C3006E92E1 /* Team.m in Sources */,
-				2F01653A19A4F11E00C4862B /* NSDate+Iso8601.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CAF957E18C62E0100A41CB8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F768E9C8191D095B003287E3 /* ObservationTests.m in Sources */,
-				4CAF959218C62E0100A41CB8 /* AuthenticationTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4CAF958918C62E0100A41CB8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4CAF957118C62E0100A41CB8 /* mage-ios-sdk */;
-			targetProxy = 4CAF958818C62E0100A41CB8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4CAF958E18C62E0100A41CB8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CAF958F18C62E0100A41CB8 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		4CAF959318C62E0100A41CB8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		4CAF959418C62E0100A41CB8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4CAF959618C62E0100A41CB8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 420659603566C15B6C6D5621 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				DSTROOT = /tmp/mage_ios_sdk.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MAGE/mage-ios-sdk-Prefix.pch";
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		4CAF959718C62E0100A41CB8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FFAEE42C21F68388710D523 /* Pods.release.xcconfig */;
-			buildSettings = {
-				DSTROOT = /tmp/mage_ios_sdk.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MAGE/mage-ios-sdk-Prefix.pch";
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		4CAF959918C62E0100A41CB8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B43815519D5CF6AF74F5F61 /* Pods-mage-ios-sdkTests.debug.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MAGE/mage-ios-sdk-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "mage-ios-sdkTests/mage-ios-sdkTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-l\"Pods-mage-ios-sdkTests-AFNetworking\"",
-					"-l\"Pods-mage-ios-sdkTests-DateTools\"",
-					"-l\"Pods-mage-ios-sdkTests-MagicalRecord\"",
-					"-l\"Pods-mage-ios-sdkTests-OHHTTPStubs\"",
-					"-l\"Pods-mage-ios-sdkTests-TRVSMonitor\"",
-					"-l\"Pods-mage-ios-sdkTests-objective-zip\"",
-					"-l\"z\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"CoreData\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"$(inherited)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		4CAF959A18C62E0100A41CB8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF92406987D799C2D14562A9 /* Pods-mage-ios-sdkTests.release.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MAGE/mage-ios-sdk-Prefix.pch";
-				INFOPLIST_FILE = "mage-ios-sdkTests/mage-ios-sdkTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-l\"Pods-mage-ios-sdkTests-AFNetworking\"",
-					"-l\"Pods-mage-ios-sdkTests-DateTools\"",
-					"-l\"Pods-mage-ios-sdkTests-MagicalRecord\"",
-					"-l\"Pods-mage-ios-sdkTests-OHHTTPStubs\"",
-					"-l\"Pods-mage-ios-sdkTests-TRVSMonitor\"",
-					"-l\"Pods-mage-ios-sdkTests-objective-zip\"",
-					"-l\"z\"",
-					"-framework",
-					"\"CFNetwork\"",
-					"-framework",
-					"\"CoreData\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"MobileCoreServices\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"$(inherited)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		4CAF956D18C62E0100A41CB8 /* Build configuration list for PBXProject "mage-ios-sdk" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CAF959318C62E0100A41CB8 /* Debug */,
-				4CAF959418C62E0100A41CB8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CAF959518C62E0100A41CB8 /* Build configuration list for PBXNativeTarget "mage-ios-sdk" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CAF959618C62E0100A41CB8 /* Debug */,
-				4CAF959718C62E0100A41CB8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CAF959818C62E0100A41CB8 /* Build configuration list for PBXNativeTarget "mage-ios-sdkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CAF959918C62E0100A41CB8 /* Debug */,
-				4CAF959A18C62E0100A41CB8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F7B275521AA108F000DD72DE /* mage-ios-sdk.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2F3A26451CBF1A6E00BE50D3 /* mage-ios-sdk 8.xcdatamodel */,
-				F7B2755A1AA4D91B00DD72DE /* mage-ios-sdk 7.xcdatamodel */,
-				F7B275531AA108F000DD72DE /* mage-ios-sdk 2.xcdatamodel */,
-				F7B275541AA108F000DD72DE /* mage-ios-sdk 3.xcdatamodel */,
-				F7B275551AA108F000DD72DE /* mage-ios-sdk 4.xcdatamodel */,
-				F7B275561AA108F000DD72DE /* mage-ios-sdk 5.xcdatamodel */,
-				F7B275571AA108F000DD72DE /* mage-ios-sdk 6.xcdatamodel */,
-				F7B275581AA108F000DD72DE /* mage-ios-sdk.xcdatamodel */,
-			);
-			currentVersion = 2F3A26451CBF1A6E00BE50D3 /* mage-ios-sdk 8.xcdatamodel */;
-			name = "mage-ios-sdk.xcdatamodeld";
-			path = "MAGE/mage-ios-sdk.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
-	};
-	rootObject = 4CAF956A18C62E0100A41CB8 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>035DED54921404DE4A6B3EBE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>038239C1F41BF04C6741B174</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>1AE0D044A05119B6C743A6E4</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>2F016527199CF36E00C4862B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2F01652B199D1C6D00C4862B</string>
+				<string>2F01652C199D1C6D00C4862B</string>
+				<string>2F01653119A2A88D00C4862B</string>
+				<string>2F01653219A2A88D00C4862B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Location</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2F01652B199D1C6D00C4862B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LocationFetchService.h</string>
+			<key>path</key>
+			<string>MAGE/LocationFetchService.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F01652C199D1C6D00C4862B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LocationFetchService.m</string>
+			<key>path</key>
+			<string>MAGE/LocationFetchService.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F01652D199D1C6D00C4862B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F01652C199D1C6D00C4862B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F01653119A2A88D00C4862B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LocationService.h</string>
+			<key>path</key>
+			<string>MAGE/LocationService.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F01653219A2A88D00C4862B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LocationService.m</string>
+			<key>path</key>
+			<string>MAGE/LocationService.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F01653319A2A88D00C4862B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F01653219A2A88D00C4862B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F01653719A4EFB000C4862B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2F01653819A4F11E00C4862B</string>
+				<string>2F01653919A4F11E00C4862B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Date</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2F01653819A4F11E00C4862B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSDate+Iso8601.h</string>
+			<key>path</key>
+			<string>MAGE/NSDate+Iso8601.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F01653919A4F11E00C4862B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSDate+Iso8601.m</string>
+			<key>path</key>
+			<string>MAGE/NSDate+Iso8601.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F01653A19A4F11E00C4862B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F01653919A4F11E00C4862B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F2A76E819A7DE770008E7DD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2F2A76E919A7DE8D0008E7DD</string>
+				<string>2F2A76EA19A7DE8D0008E7DD</string>
+				<string>F7971BD41A03F50D001505F0</string>
+				<string>F7971BD51A03F50D001505F0</string>
+				<string>F76655841A30EAEB00558EBB</string>
+				<string>F76655851A30EAEB00558EBB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Observation</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2F2A76E919A7DE8D0008E7DD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ObservationFetchService.h</string>
+			<key>path</key>
+			<string>MAGE/ObservationFetchService.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F2A76EA19A7DE8D0008E7DD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ObservationFetchService.m</string>
+			<key>path</key>
+			<string>MAGE/ObservationFetchService.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F2A76EB19A7DE8D0008E7DD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F2A76EA19A7DE8D0008E7DD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F3A26451CBF1A6E00BE50D3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 8.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2F5332381CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Attachment.h</string>
+			<key>path</key>
+			<string>MAGE/Attachment.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332391CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Attachment.m</string>
+			<key>path</key>
+			<string>MAGE/Attachment.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F53323C1CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Event.h</string>
+			<key>path</key>
+			<string>MAGE/Event.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F53323D1CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Event.m</string>
+			<key>path</key>
+			<string>MAGE/Event.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332401CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>GPSLocation.h</string>
+			<key>path</key>
+			<string>MAGE/GPSLocation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332411CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>GPSLocation.m</string>
+			<key>path</key>
+			<string>MAGE/GPSLocation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332441CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Layer.h</string>
+			<key>path</key>
+			<string>MAGE/Layer.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332451CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Layer.m</string>
+			<key>path</key>
+			<string>MAGE/Layer.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332481CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Location.h</string>
+			<key>path</key>
+			<string>MAGE/Location.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332491CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Location.m</string>
+			<key>path</key>
+			<string>MAGE/Location.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F53324C1CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Observation.h</string>
+			<key>path</key>
+			<string>MAGE/Observation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F53324D1CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Observation.m</string>
+			<key>path</key>
+			<string>MAGE/Observation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332501CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Role.h</string>
+			<key>path</key>
+			<string>MAGE/Role.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332511CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Role.m</string>
+			<key>path</key>
+			<string>MAGE/Role.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332541CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Server.h</string>
+			<key>path</key>
+			<string>MAGE/Server.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332551CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Server.m</string>
+			<key>path</key>
+			<string>MAGE/Server.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332581CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>StaticLayer.h</string>
+			<key>path</key>
+			<string>MAGE/StaticLayer.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332591CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>StaticLayer.m</string>
+			<key>path</key>
+			<string>MAGE/StaticLayer.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F53325C1CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Team.h</string>
+			<key>path</key>
+			<string>MAGE/Team.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F53325D1CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Team.m</string>
+			<key>path</key>
+			<string>MAGE/Team.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332601CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>User.h</string>
+			<key>path</key>
+			<string>MAGE/User.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332611CC154C3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>User.m</string>
+			<key>path</key>
+			<string>MAGE/User.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332641CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332391CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332661CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F53323D1CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332681CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332411CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F53326A1CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332451CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F53326C1CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332491CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F53326E1CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F53324D1CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332701CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332511CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332721CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332551CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332741CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332591CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332761CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F53325D1CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332781CC154C3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332611CC154C3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332BF1CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>GPSLocation+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/GPSLocation+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C01CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>GPSLocation+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/GPSLocation+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C11CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Observation+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Observation+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C21CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Observation+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Observation+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C31CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Attachment+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Attachment+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C41CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Attachment+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Attachment+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C51CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Role+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Role+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C61CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Role+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Role+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C71CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Event+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Event+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C81CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Event+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Event+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332C91CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Team+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Team+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332CA1CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Team+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Team+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332CB1CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>User+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/User+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332CC1CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>User+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/User+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332CD1CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Location+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Location+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332CE1CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Location+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Location+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332CF1CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Server+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Server+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332D01CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Server+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Server+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332D11CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>StaticLayer+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/StaticLayer+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332D21CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>StaticLayer+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/StaticLayer+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332D31CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Layer+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/Layer+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332D41CC557F3006E92E1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Layer+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/Layer+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F5332D51CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332C01CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332D61CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332C21CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332D71CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332C41CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332D81CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332C61CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332D91CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332C81CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332DA1CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332CA1CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332DB1CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332CC1CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332DC1CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332CE1CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332DD1CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332D01CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332DE1CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332D21CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F5332DF1CC557F3006E92E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F5332D41CC557F3006E92E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F58BC241BFBBFE500B3B09D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>OAuthAuthentication.h</string>
+			<key>path</key>
+			<string>MAGE/OAuthAuthentication.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F58BC251BFBBFE500B3B09D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>OAuthAuthentication.m</string>
+			<key>path</key>
+			<string>MAGE/OAuthAuthentication.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F58BC261BFBBFE500B3B09D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F58BC251BFBBFE500B3B09D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F58BC271BFBF64000B3B09D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MagicalRecord+MAGE.h</string>
+			<key>path</key>
+			<string>MAGE/MagicalRecord+MAGE.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F58BC281BFBF64000B3B09D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MagicalRecord+MAGE.m</string>
+			<key>path</key>
+			<string>MAGE/MagicalRecord+MAGE.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F58BC291BFBF64000B3B09D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F58BC281BFBF64000B3B09D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F92D1091D91CD6900CC0149</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ObservationFavorite.h</string>
+			<key>path</key>
+			<string>MAGE/ObservationFavorite.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F92D10A1D91CD6900CC0149</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ObservationFavorite.m</string>
+			<key>path</key>
+			<string>MAGE/ObservationFavorite.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F92D10B1D91CD6900CC0149</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ObservationFavorite+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/ObservationFavorite+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F92D10C1D91CD6900CC0149</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ObservationFavorite+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/ObservationFavorite+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2F92D10E1D91CD6900CC0149</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F92D10A1D91CD6900CC0149</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F92D10F1D91CD6900CC0149</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F92D10C1D91CD6900CC0149</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2FA571191D904C9E00B2F0CE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 9.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2FA571261D904D4A00B2F0CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ObservationImportant.h</string>
+			<key>path</key>
+			<string>MAGE/ObservationImportant.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FA571271D904D4A00B2F0CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ObservationImportant.m</string>
+			<key>path</key>
+			<string>MAGE/ObservationImportant.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FA571281D904D4A00B2F0CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ObservationImportant+CoreDataProperties.h</string>
+			<key>path</key>
+			<string>MAGE/ObservationImportant+CoreDataProperties.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FA571291D904D4A00B2F0CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ObservationImportant+CoreDataProperties.m</string>
+			<key>path</key>
+			<string>MAGE/ObservationImportant+CoreDataProperties.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FA5712C1D904D4A00B2F0CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2FA571271D904D4A00B2F0CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2FA5712D1D904D4A00B2F0CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2FA571291D904D4A00B2F0CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2FC308011A3F83DF00FBD2BA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>mage-ios-sdk-Prefix.pch</string>
+			<key>path</key>
+			<string>MAGE/mage-ios-sdk-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FC308021A3F916600FBD2BA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2FC308031A3F91D000FBD2BA</string>
+				<string>2FC308041A3F91D000FBD2BA</string>
+				<string>F75DD3181A9F9F230007FA3F</string>
+				<string>F75DD3191A9F9F230007FA3F</string>
+				<string>2F58BC271BFBF64000B3B09D</string>
+				<string>2F58BC281BFBF64000B3B09D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Categories</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2FC308031A3F91D000FBD2BA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MagicalRecord+delete.h</string>
+			<key>path</key>
+			<string>MAGE/MagicalRecord+delete.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FC308041A3F91D000FBD2BA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MagicalRecord+delete.m</string>
+			<key>path</key>
+			<string>MAGE/MagicalRecord+delete.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FC308051A3F91D000FBD2BA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2FC308041A3F91D000FBD2BA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2FF74A4E1BEBFD3A00416090</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4CAF95A118C62FA000A41CB8</string>
+				<string>4CAF95A218C6616300A41CB8</string>
+				<string>4CAF959E18C62F7C00A41CB8</string>
+				<string>4CAF959F18C62F7C00A41CB8</string>
+				<string>F768E9C9191D0E6E003287E3</string>
+				<string>F768E9CA191D0E6E003287E3</string>
+				<string>2F58BC241BFBBFE500B3B09D</string>
+				<string>2F58BC251BFBBFE500B3B09D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Authentication</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2FFE499619EC347300BC8922</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MageServer.h</string>
+			<key>path</key>
+			<string>MAGE/MageServer.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FFE499719EC347300BC8922</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MageServer.m</string>
+			<key>path</key>
+			<string>MAGE/MageServer.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2FFE499819EC347300BC8922</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2FFE499719EC347300BC8922</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3EEFBB0E364249041D412032</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>4CAF956918C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F7B275521AA108F000DD72DE</string>
+				<string>4CAF957718C62E0100A41CB8</string>
+				<string>4CAF957818C62E0100A41CB8</string>
+				<string>4CAF958B18C62E0100A41CB8</string>
+				<string>4CAF957418C62E0100A41CB8</string>
+				<string>4CAF957318C62E0100A41CB8</string>
+				<string>B738473B90584A1FA58C4ABE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF956A18C62E0100A41CB8</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>National Geospatial-Intelligence Agency</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>4CAF956D18C62E0100A41CB8</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>4CAF956918C62E0100A41CB8</string>
+			<key>productRefGroup</key>
+			<string>4CAF957318C62E0100A41CB8</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>4CAF957118C62E0100A41CB8</string>
+				<string>4CAF958118C62E0100A41CB8</string>
+			</array>
+		</dict>
+		<key>4CAF956D18C62E0100A41CB8</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4CAF959318C62E0100A41CB8</string>
+				<string>4CAF959418C62E0100A41CB8</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4CAF956E18C62E0100A41CB8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2F2A76EB19A7DE8D0008E7DD</string>
+				<string>2F5332DC1CC557F3006E92E1</string>
+				<string>2F92D10F1D91CD6900CC0149</string>
+				<string>2FFE499819EC347300BC8922</string>
+				<string>2F5332681CC154C3006E92E1</string>
+				<string>2F5332DD1CC557F3006E92E1</string>
+				<string>F7F133621975857000E79762</string>
+				<string>F76655861A30EAEB00558EBB</string>
+				<string>2F58BC261BFBBFE500B3B09D</string>
+				<string>2F01653319A2A88D00C4862B</string>
+				<string>2F53326E1CC154C3006E92E1</string>
+				<string>F7A87F351AA51695001AEDF4</string>
+				<string>2F01652D199D1C6D00C4862B</string>
+				<string>2F5332641CC154C3006E92E1</string>
+				<string>F7B25E1F191AA21900589E5B</string>
+				<string>F7F7B7D91A6EDE1100270D61</string>
+				<string>2FA5712C1D904D4A00B2F0CE</string>
+				<string>2F58BC291BFBF64000B3B09D</string>
+				<string>2F5332DB1CC557F3006E92E1</string>
+				<string>F7B275591AA108F000DD72DE</string>
+				<string>F768E9CE191D1C7B003287E3</string>
+				<string>F75DD31A1A9F9F230007FA3F</string>
+				<string>2F5332D81CC557F3006E92E1</string>
+				<string>F7971BD61A03F50D001505F0</string>
+				<string>2F5332DA1CC557F3006E92E1</string>
+				<string>2F5332DF1CC557F3006E92E1</string>
+				<string>2F5332661CC154C3006E92E1</string>
+				<string>2F5332701CC154C3006E92E1</string>
+				<string>2F5332D51CC557F3006E92E1</string>
+				<string>2F5332D71CC557F3006E92E1</string>
+				<string>F7B679751959CF2D0035596A</string>
+				<string>2F5332781CC154C3006E92E1</string>
+				<string>2F5332D91CC557F3006E92E1</string>
+				<string>2F5332D61CC557F3006E92E1</string>
+				<string>2F92D10E1D91CD6900CC0149</string>
+				<string>2F53326A1CC154C3006E92E1</string>
+				<string>F768E9CB191D0E6E003287E3</string>
+				<string>2FA5712D1D904D4A00B2F0CE</string>
+				<string>2F5332741CC154C3006E92E1</string>
+				<string>2F5332721CC154C3006E92E1</string>
+				<string>2F5332DE1CC557F3006E92E1</string>
+				<string>4CAF95A318C6616300A41CB8</string>
+				<string>F7B25E22191AA8CE00589E5B</string>
+				<string>2FC308051A3F91D000FBD2BA</string>
+				<string>F7C5FB7B195DDFF30065379C</string>
+				<string>4CAF95A018C62F7C00A41CB8</string>
+				<string>2F53326C1CC154C3006E92E1</string>
+				<string>2F5332761CC154C3006E92E1</string>
+				<string>2F01653A19A4F11E00C4862B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4CAF956F18C62E0100A41CB8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F7B25E24191AB5A900589E5B</string>
+				<string>4CAF957618C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4CAF957018C62E0100A41CB8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string>include/$(PRODUCT_NAME)</string>
+			<key>dstSubfolderSpec</key>
+			<string>16</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4CAF957118C62E0100A41CB8</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4CAF959518C62E0100A41CB8</string>
+			<key>buildPhases</key>
+			<array>
+				<string>4CAF956E18C62E0100A41CB8</string>
+				<string>4CAF956F18C62E0100A41CB8</string>
+				<string>4CAF957018C62E0100A41CB8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>mage-ios-sdk</string>
+			<key>productName</key>
+			<string>mage-ios-sdk</string>
+			<key>productReference</key>
+			<string>4CAF957218C62E0100A41CB8</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>4CAF957218C62E0100A41CB8</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libmage-ios-sdk.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4CAF957318C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4CAF957218C62E0100A41CB8</string>
+				<string>4CAF958218C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF957418C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F7B25E23191AB5A900589E5B</string>
+				<string>4CAF957518C62E0100A41CB8</string>
+				<string>4CAF958318C62E0100A41CB8</string>
+				<string>4CAF958618C62E0100A41CB8</string>
+				<string>CFB9F865C86598EFC6955A8A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF957518C62E0100A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4CAF957618C62E0100A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF957518C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF957718C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2FF74A4E1BEBFD3A00416090</string>
+				<string>2FC308021A3F916600FBD2BA</string>
+				<string>2F2A76E819A7DE770008E7DD</string>
+				<string>2F01653719A4EFB000C4862B</string>
+				<string>2F016527199CF36E00C4862B</string>
+				<string>F7F1335F1975855200E79762</string>
+				<string>F7E35845191BDF3B004EA79D</string>
+				<string>F7E35844191BDF29004EA79D</string>
+				<string>F768E9CC191D1C7B003287E3</string>
+				<string>F768E9CD191D1C7B003287E3</string>
+				<string>2FFE499619EC347300BC8922</string>
+				<string>2FFE499719EC347300BC8922</string>
+				<string>F7F7B7D71A6EDE1100270D61</string>
+				<string>F7F7B7D81A6EDE1100270D61</string>
+				<string>F7A87F331AA51695001AEDF4</string>
+				<string>F7A87F341AA51695001AEDF4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MAGE</string>
+			<key>path</key>
+			<string>mage-ios-sdk</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF957818C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2FC308011A3F83DF00FBD2BA</string>
+				<string>F7DEF9251912BD2D0026B9D0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>path</key>
+			<string>mage-ios-sdk</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF957E18C62E0100A41CB8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F768E9C8191D095B003287E3</string>
+				<string>4CAF959218C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4CAF957F18C62E0100A41CB8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4CAF958518C62E0100A41CB8</string>
+				<string>4CAF958418C62E0100A41CB8</string>
+				<string>4CAF958A18C62E0100A41CB8</string>
+				<string>4CAF958718C62E0100A41CB8</string>
+				<string>4DD0FBCF215EA177D40046F8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4CAF958018C62E0100A41CB8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4CAF959018C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4CAF958118C62E0100A41CB8</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4CAF959818C62E0100A41CB8</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5153441CB01B5A28A441C8FF</string>
+				<string>BB7E186987DD093C5A950B50</string>
+				<string>4CAF957E18C62E0100A41CB8</string>
+				<string>4CAF957F18C62E0100A41CB8</string>
+				<string>4CAF958018C62E0100A41CB8</string>
+				<string>035DED54921404DE4A6B3EBE</string>
+				<string>3EEFBB0E364249041D412032</string>
+				<string>1AE0D044A05119B6C743A6E4</string>
+				<string>038239C1F41BF04C6741B174</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>4CAF958918C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>mage-ios-sdkTests</string>
+			<key>productName</key>
+			<string>mage-ios-sdkTests</string>
+			<key>productReference</key>
+			<string>4CAF958218C62E0100A41CB8</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>4CAF958218C62E0100A41CB8</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>mage-ios-sdkTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>4CAF958318C62E0100A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>4CAF958418C62E0100A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF958318C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF958518C62E0100A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF957518C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF958618C62E0100A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>4CAF958718C62E0100A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF958618C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF958818C62E0100A41CB8</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>4CAF956A18C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>4CAF957118C62E0100A41CB8</string>
+			<key>remoteInfo</key>
+			<string>mage-ios-sdk</string>
+		</dict>
+		<key>4CAF958918C62E0100A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>4CAF957118C62E0100A41CB8</string>
+			<key>targetProxy</key>
+			<string>4CAF958818C62E0100A41CB8</string>
+		</dict>
+		<key>4CAF958A18C62E0100A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF957218C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF958B18C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4CAF959118C62E0100A41CB8</string>
+				<string>F768E9C7191D095B003287E3</string>
+				<string>4CAF958C18C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Tests</string>
+			<key>path</key>
+			<string>mage-ios-sdkTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF958C18C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4CAF958D18C62E0100A41CB8</string>
+				<string>4CAF958E18C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF958D18C62E0100A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>mage-ios-sdkTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF958E18C62E0100A41CB8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4CAF958F18C62E0100A41CB8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF958F18C62E0100A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF959018C62E0100A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF958E18C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF959118C62E0100A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AuthenticationTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4CAF959218C62E0100A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF959118C62E0100A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF959318C62E0100A41CB8</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4CAF959418C62E0100A41CB8</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4CAF959518C62E0100A41CB8</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4CAF959618C62E0100A41CB8</string>
+				<string>4CAF959718C62E0100A41CB8</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4CAF959618C62E0100A41CB8</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>DSTROOT</key>
+				<string>/tmp/mage_ios_sdk.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>MAGE/mage-ios-sdk-Prefix.pch</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>$(inherited)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4CAF959718C62E0100A41CB8</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>DSTROOT</key>
+				<string>/tmp/mage_ios_sdk.dst</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>MAGE/mage-ios-sdk-Prefix.pch</string>
+				<key>OTHER_LDFLAGS</key>
+				<string>$(inherited)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4CAF959818C62E0100A41CB8</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4CAF959918C62E0100A41CB8</string>
+				<string>4CAF959A18C62E0100A41CB8</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4CAF959918C62E0100A41CB8</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>595D169C90A86905653E937D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>MAGE/mage-ios-sdk-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>mage-ios-sdkTests/mage-ios-sdkTests-Info.plist</string>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string>-l"Pods-mage-ios-sdkTests-AFNetworking"</string>
+					<string>-l"Pods-mage-ios-sdkTests-DateTools"</string>
+					<string>-l"Pods-mage-ios-sdkTests-MagicalRecord"</string>
+					<string>-l"Pods-mage-ios-sdkTests-OHHTTPStubs"</string>
+					<string>-l"Pods-mage-ios-sdkTests-TRVSMonitor"</string>
+					<string>-l"Pods-mage-ios-sdkTests-objective-zip"</string>
+					<string>-l"z"</string>
+					<string>-framework</string>
+					<string>"CFNetwork"</string>
+					<string>-framework</string>
+					<string>"CoreData"</string>
+					<string>-framework</string>
+					<string>"CoreGraphics"</string>
+					<string>-framework</string>
+					<string>"Foundation"</string>
+					<string>-framework</string>
+					<string>"MobileCoreServices"</string>
+					<string>-framework</string>
+					<string>"Security"</string>
+					<string>-framework</string>
+					<string>"SystemConfiguration"</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4CAF959A18C62E0100A41CB8</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>ED58FFB6E12F877BD465D73F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>MAGE/mage-ios-sdk-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>mage-ios-sdkTests/mage-ios-sdkTests-Info.plist</string>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string>-l"Pods-mage-ios-sdkTests-AFNetworking"</string>
+					<string>-l"Pods-mage-ios-sdkTests-DateTools"</string>
+					<string>-l"Pods-mage-ios-sdkTests-MagicalRecord"</string>
+					<string>-l"Pods-mage-ios-sdkTests-OHHTTPStubs"</string>
+					<string>-l"Pods-mage-ios-sdkTests-TRVSMonitor"</string>
+					<string>-l"Pods-mage-ios-sdkTests-objective-zip"</string>
+					<string>-l"z"</string>
+					<string>-framework</string>
+					<string>"CFNetwork"</string>
+					<string>-framework</string>
+					<string>"CoreData"</string>
+					<string>-framework</string>
+					<string>"CoreGraphics"</string>
+					<string>-framework</string>
+					<string>"Foundation"</string>
+					<string>-framework</string>
+					<string>"MobileCoreServices"</string>
+					<string>-framework</string>
+					<string>"Security"</string>
+					<string>-framework</string>
+					<string>"SystemConfiguration"</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4CAF959E18C62F7C00A41CB8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>LocalAuthentication.h</string>
+			<key>path</key>
+			<string>MAGE/LocalAuthentication.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4CAF959F18C62F7C00A41CB8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>LocalAuthentication.m</string>
+			<key>path</key>
+			<string>MAGE/LocalAuthentication.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4CAF95A018C62F7C00A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF959F18C62F7C00A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4CAF95A118C62FA000A41CB8</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Authentication.h</string>
+			<key>path</key>
+			<string>MAGE/Authentication.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4CAF95A218C6616300A41CB8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Authentication.m</string>
+			<key>path</key>
+			<string>MAGE/Authentication.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4CAF95A318C6616300A41CB8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4CAF95A218C6616300A41CB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4DD0FBCF215EA177D40046F8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CFB9F865C86598EFC6955A8A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5153441CB01B5A28A441C8FF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>595D169C90A86905653E937D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-mage-ios-sdkTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B738473B90584A1FA58C4ABE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>595D169C90A86905653E937D</string>
+				<string>ED58FFB6E12F877BD465D73F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BB7E186987DD093C5A950B50</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [ $? != 0 ] ; then
+    # print error to STDERR
+    echo "error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation." &gt;&amp;2
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>CFB9F865C86598EFC6955A8A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-mage-ios-sdkTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>ED58FFB6E12F877BD465D73F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-mage-ios-sdkTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-mage-ios-sdkTests/Pods-mage-ios-sdkTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F739EFF31AB1E41E003A6E4B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2F5332381CC154C3006E92E1</string>
+				<string>2F5332391CC154C3006E92E1</string>
+				<string>2F5332C31CC557F3006E92E1</string>
+				<string>2F5332C41CC557F3006E92E1</string>
+				<string>2F53323C1CC154C3006E92E1</string>
+				<string>2F53323D1CC154C3006E92E1</string>
+				<string>2F5332C71CC557F3006E92E1</string>
+				<string>2F5332C81CC557F3006E92E1</string>
+				<string>2F5332401CC154C3006E92E1</string>
+				<string>2F5332411CC154C3006E92E1</string>
+				<string>2F5332BF1CC557F3006E92E1</string>
+				<string>2F5332C01CC557F3006E92E1</string>
+				<string>2F5332441CC154C3006E92E1</string>
+				<string>2F5332451CC154C3006E92E1</string>
+				<string>2F5332D31CC557F3006E92E1</string>
+				<string>2F5332D41CC557F3006E92E1</string>
+				<string>2F5332481CC154C3006E92E1</string>
+				<string>2F5332491CC154C3006E92E1</string>
+				<string>2F5332CD1CC557F3006E92E1</string>
+				<string>2F5332CE1CC557F3006E92E1</string>
+				<string>2F53324C1CC154C3006E92E1</string>
+				<string>2F53324D1CC154C3006E92E1</string>
+				<string>2F5332C11CC557F3006E92E1</string>
+				<string>2F5332C21CC557F3006E92E1</string>
+				<string>2F92D1091D91CD6900CC0149</string>
+				<string>2F92D10A1D91CD6900CC0149</string>
+				<string>2F92D10B1D91CD6900CC0149</string>
+				<string>2F92D10C1D91CD6900CC0149</string>
+				<string>2FA571261D904D4A00B2F0CE</string>
+				<string>2FA571271D904D4A00B2F0CE</string>
+				<string>2FA571281D904D4A00B2F0CE</string>
+				<string>2FA571291D904D4A00B2F0CE</string>
+				<string>2F5332501CC154C3006E92E1</string>
+				<string>2F5332511CC154C3006E92E1</string>
+				<string>2F5332C51CC557F3006E92E1</string>
+				<string>2F5332C61CC557F3006E92E1</string>
+				<string>2F5332541CC154C3006E92E1</string>
+				<string>2F5332551CC154C3006E92E1</string>
+				<string>2F5332CF1CC557F3006E92E1</string>
+				<string>2F5332D01CC557F3006E92E1</string>
+				<string>2F5332581CC154C3006E92E1</string>
+				<string>2F5332591CC154C3006E92E1</string>
+				<string>2F5332D11CC557F3006E92E1</string>
+				<string>2F5332D21CC557F3006E92E1</string>
+				<string>2F53325C1CC154C3006E92E1</string>
+				<string>2F53325D1CC154C3006E92E1</string>
+				<string>2F5332C91CC557F3006E92E1</string>
+				<string>2F5332CA1CC557F3006E92E1</string>
+				<string>2F5332601CC154C3006E92E1</string>
+				<string>2F5332611CC154C3006E92E1</string>
+				<string>2F5332CB1CC557F3006E92E1</string>
+				<string>2F5332CC1CC557F3006E92E1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CoreData</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F75DD3181A9F9F230007FA3F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSString+Contains.h</string>
+			<key>path</key>
+			<string>MAGE/NSString+Contains.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F75DD3191A9F9F230007FA3F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSString+Contains.m</string>
+			<key>path</key>
+			<string>MAGE/NSString+Contains.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F75DD31A1A9F9F230007FA3F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F75DD3191A9F9F230007FA3F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F76655841A30EAEB00558EBB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AttachmentPushService.h</string>
+			<key>path</key>
+			<string>MAGE/AttachmentPushService.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F76655851A30EAEB00558EBB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AttachmentPushService.m</string>
+			<key>path</key>
+			<string>MAGE/AttachmentPushService.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F76655861A30EAEB00558EBB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F76655851A30EAEB00558EBB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F768E9C7191D095B003287E3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ObservationTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F768E9C8191D095B003287E3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F768E9C7191D095B003287E3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F768E9C9191D0E6E003287E3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ServerAuthentication.h</string>
+			<key>path</key>
+			<string>MAGE/ServerAuthentication.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F768E9CA191D0E6E003287E3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ServerAuthentication.m</string>
+			<key>path</key>
+			<string>MAGE/ServerAuthentication.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F768E9CB191D0E6E003287E3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F768E9CA191D0E6E003287E3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F768E9CC191D1C7B003287E3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>HttpManager.h</string>
+			<key>path</key>
+			<string>MAGE/HttpManager.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F768E9CD191D1C7B003287E3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>HttpManager.m</string>
+			<key>path</key>
+			<string>MAGE/HttpManager.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F768E9CE191D1C7B003287E3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F768E9CD191D1C7B003287E3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7971BD41A03F50D001505F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>ObservationPushService.h</string>
+			<key>path</key>
+			<string>MAGE/ObservationPushService.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7971BD51A03F50D001505F0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>ObservationPushService.m</string>
+			<key>path</key>
+			<string>MAGE/ObservationPushService.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7971BD61A03F50D001505F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7971BD51A03F50D001505F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7A87F331AA51695001AEDF4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Mage.h</string>
+			<key>path</key>
+			<string>MAGE/Mage.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7A87F341AA51695001AEDF4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Mage.m</string>
+			<key>path</key>
+			<string>MAGE/Mage.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7A87F351AA51695001AEDF4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7A87F341AA51695001AEDF4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7B25E1D191AA21900589E5B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Geometry.h</string>
+			<key>path</key>
+			<string>MAGE/Geometry.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7B25E1E191AA21900589E5B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Geometry.m</string>
+			<key>path</key>
+			<string>MAGE/Geometry.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7B25E1F191AA21900589E5B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7B25E1E191AA21900589E5B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7B25E20191AA8CE00589E5B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>GeoPoint.h</string>
+			<key>path</key>
+			<string>MAGE/GeoPoint.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7B25E21191AA8CE00589E5B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>GeoPoint.m</string>
+			<key>path</key>
+			<string>MAGE/GeoPoint.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7B25E22191AA8CE00589E5B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7B25E21191AA8CE00589E5B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7B25E23191AB5A900589E5B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreLocation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreLocation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F7B25E24191AB5A900589E5B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7B25E23191AB5A900589E5B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7B275521AA108F000DD72DE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2FA571191D904C9E00B2F0CE</string>
+				<string>2F3A26451CBF1A6E00BE50D3</string>
+				<string>F7B2755A1AA4D91B00DD72DE</string>
+				<string>F7B275531AA108F000DD72DE</string>
+				<string>F7B275541AA108F000DD72DE</string>
+				<string>F7B275551AA108F000DD72DE</string>
+				<string>F7B275561AA108F000DD72DE</string>
+				<string>F7B275571AA108F000DD72DE</string>
+				<string>F7B275581AA108F000DD72DE</string>
+			</array>
+			<key>currentVersion</key>
+			<string>2FA571191D904C9E00B2F0CE</string>
+			<key>isa</key>
+			<string>XCVersionGroup</string>
+			<key>name</key>
+			<string>mage-ios-sdk.xcdatamodeld</string>
+			<key>path</key>
+			<string>MAGE/mage-ios-sdk.xcdatamodeld</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>versionGroupType</key>
+			<string>wrapper.xcdatamodel</string>
+		</dict>
+		<key>F7B275531AA108F000DD72DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 2.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7B275541AA108F000DD72DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 3.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7B275551AA108F000DD72DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 4.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7B275561AA108F000DD72DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 5.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7B275571AA108F000DD72DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 6.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7B275581AA108F000DD72DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7B275591AA108F000DD72DE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7B275521AA108F000DD72DE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7B2755A1AA4D91B00DD72DE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.xcdatamodel</string>
+			<key>path</key>
+			<string>mage-ios-sdk 7.xcdatamodel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7B679731959CF2D0035596A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MageEnums.h</string>
+			<key>path</key>
+			<string>MAGE/MageEnums.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7B679741959CF2D0035596A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MageEnums.m</string>
+			<key>path</key>
+			<string>MAGE/MageEnums.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7B679751959CF2D0035596A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7B679741959CF2D0035596A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7C5FB79195DDFF30065379C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Form.h</string>
+			<key>path</key>
+			<string>MAGE/Form.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7C5FB7A195DDFF30065379C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>Form.m</string>
+			<key>path</key>
+			<string>MAGE/Form.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7C5FB7B195DDFF30065379C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7C5FB7A195DDFF30065379C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7DEF9251912BD2D0026B9D0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>preferences.plist</string>
+			<key>path</key>
+			<string>MAGE/preferences.plist</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7E35844191BDF29004EA79D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F739EFF31AB1E41E003A6E4B</string>
+				<string>F7C5FB79195DDFF30065379C</string>
+				<string>F7C5FB7A195DDFF30065379C</string>
+				<string>F7B679731959CF2D0035596A</string>
+				<string>F7B679741959CF2D0035596A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7E35845191BDF3B004EA79D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F7B25E1D191AA21900589E5B</string>
+				<string>F7B25E1E191AA21900589E5B</string>
+				<string>F7B25E20191AA8CE00589E5B</string>
+				<string>F7B25E21191AA8CE00589E5B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Geo</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7F1335F1975855200E79762</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F7F133601975857000E79762</string>
+				<string>F7F133611975857000E79762</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Utilities</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F7F133601975857000E79762</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UserUtility.h</string>
+			<key>path</key>
+			<string>MAGE/UserUtility.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7F133611975857000E79762</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UserUtility.m</string>
+			<key>path</key>
+			<string>MAGE/UserUtility.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7F133621975857000E79762</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7F133611975857000E79762</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F7F7B7D71A6EDE1100270D61</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>StoredPassword.h</string>
+			<key>path</key>
+			<string>MAGE/StoredPassword.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7F7B7D81A6EDE1100270D61</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>StoredPassword.m</string>
+			<key>path</key>
+			<string>MAGE/StoredPassword.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F7F7B7D91A6EDE1100270D61</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F7F7B7D81A6EDE1100270D61</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>4CAF956A18C62E0100A41CB8</string>
+</dict>
+</plist>
