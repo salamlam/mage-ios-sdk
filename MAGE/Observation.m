@@ -335,6 +335,19 @@ NSNumber *_currentEventId;
                         [observation addFavoritesObject:favorite];
                     }
                     
+                    NSDictionary *importantJson = [feature objectForKey:@"important"];
+                    if (importantJson) {
+                        ObservationImportant *important = [ObservationImportant importantForJson:importantJson inManagedObjectContext:localContext];
+                        important.observation = observation;
+                        observation.observationImportant = important;
+                    }
+                
+                    for (NSString *userId in [feature objectForKey:@"favoriteUserIds"]) {
+                        ObservationFavorite *favorite = [ObservationFavorite favoriteForUserId:userId inManagedObjectContext:localContext];
+                        favorite.observation = observation;
+                        [observation addFavoritesObject:favorite];
+                    }
+                    
                     for (id attachmentJson in [feature objectForKey:@"attachments"]) {
                         Attachment *attachment = [Attachment attachmentForJson:attachmentJson inContext:localContext];
                         [observation addAttachmentsObject:attachment];
