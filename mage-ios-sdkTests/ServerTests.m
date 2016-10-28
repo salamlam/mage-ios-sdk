@@ -39,6 +39,8 @@
         XCTAssertTrue(contextDidSave, @"Context should have saved.");
         XCTAssertNil(error, @"Context should have saved without error:%@", error);
     };
+    
+    //check the default context for changes, they will get pushed up and make sure the completion block finishes 
 
     //Act
     // This will run on MR background thread on MR_newPrivateQueueContext; which is unable to be retrieved and tested
