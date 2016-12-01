@@ -25,21 +25,21 @@
     
     NSMutableSet *users = [[NSMutableSet alloc] init];
     for (NSString *userId in [json objectForKey:@"userIds"]) {
-        NSLog(@"Thinking about adding user %@ to the team %@", userId, self.name);
-        NSSet *filteredUsers = [self.users filteredSetUsingPredicate:[NSPredicate predicateWithFormat:@"remoteId == %@", userId]];
-        if (filteredUsers.count == 0) {
-            // see if the user exists
-            User *user = [User MR_findFirstByAttribute:@"remoteId" withValue:userId inContext:context];
-            if (!user) {
-                user = [User MR_createEntityInContext:context];
-                [user setRemoteId:userId];
-            }
-            
-            [users addObject:user];
+        // see if the user exists
+        User *user = [User MR_findFirstByAttribute:@"remoteId" withValue:userId inContext:context];
+        if (!user) {
+            user = [User MR_createEntityInContext:context];
+            [user setRemoteId:userId];
         }
+        
+        [users addObject:user];
     }
     
     [self setUsers:users];
+    
+    if ([self.name isEqualToString:@"Team 1"]) {
+        NSLog(@"foo");
+    }
 }
 
 @end
