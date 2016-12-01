@@ -44,7 +44,7 @@
     [defaults synchronize];
 }
 
-- (BOOL) isTokenExpired{
+- (BOOL) isTokenExpired {
     if (self.expired) return YES;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
