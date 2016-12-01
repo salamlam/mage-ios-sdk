@@ -45,7 +45,6 @@ NSString * const StaticLayerLoaded = @"mil.nga.giat.mage.static.layer.loaded";
         StaticLayer *fetchedLayer = [StaticLayer MR_findFirstWithPredicate:[NSPredicate predicateWithFormat:@"remoteId == %@ AND eventId == %@", layerId, eventId]];
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
             StaticLayer *localLayer = [fetchedLayer MR_inContext:localContext];
-            NSLog(@"fetched static features for %@", localLayer.name);
             NSMutableDictionary *dictionaryResponse = (NSMutableDictionary *)CFBridgingRelease(CFPropertyListCreateDeepCopy(kCFAllocatorDefault, (CFDictionaryRef)responseObject, kCFPropertyListMutableContainers));
             
             localLayer.loaded = [NSNumber numberWithBool:YES];

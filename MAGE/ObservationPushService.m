@@ -177,7 +177,6 @@ NSString * const kObservationPushFrequencyKey = @"observationPushFrequency";
     NSLog(@"about to push an additional %lu observations", (unsigned long) observationsToPush.count);
     __weak typeof(self) weakSelf = self;
     for (Observation *observation in [observationsToPush allValues]) {
-        NSLog(@"submitting observation %@", observation);
         NSOperation *observationPushOperation = [Observation operationToPushObservation:observation success:^(id response) {
             NSLog(@"Successfully submitted observation");
             [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
@@ -216,7 +215,6 @@ NSString * const kObservationPushFrequencyKey = @"observationPushFrequency";
     NSLog(@"about to push an additional %lu favorites", (unsigned long) favoritesToPush.count);
     __weak typeof(self) weakSelf = self;
     for (ObservationFavorite *favorite in [favoritesToPush allValues]) {
-        NSLog(@"submitting favorite %@", favorite);
         NSOperation *favoritePushOperation = [Observation operationToPushFavorite:favorite success:^(id response) {
             NSLog(@"Successfully submitted favorite");
             [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
@@ -249,7 +247,6 @@ NSString * const kObservationPushFrequencyKey = @"observationPushFrequency";
     NSLog(@"about to push an additional %lu importants", (unsigned long) importantsToPush.count);
     __weak typeof(self) weakSelf = self;
     for (ObservationImportant *important in [importantsToPush allValues]) {
-        NSLog(@"submitting favorite %@", important);
         NSOperation *importantPushOperation = [Observation operationToPushImportant:important success:^(id response) {
             NSLog(@"Successfully submitted important");
             [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
